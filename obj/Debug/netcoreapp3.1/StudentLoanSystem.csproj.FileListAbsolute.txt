@@ -8,7 +8,6 @@ C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\Stud
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\netcoreapp3.1\StudentLoanSystem.pdb
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\netcoreapp3.1\StudentLoanSystem.Views.dll
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\netcoreapp3.1\StudentLoanSystem.Views.pdb
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\netcoreapp3.1\StudentLoanSystem.csprojAssemblyReference.cache
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\netcoreapp3.1\StudentLoanSystem.AssemblyInfoInputs.cache
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\netcoreapp3.1\StudentLoanSystem.AssemblyInfo.cs
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\netcoreapp3.1\StudentLoanSystem.csproj.CoreCompileInputs.cache
@@ -35,3 +34,6 @@ C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\Stud
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\netcoreapp3.1\StudentLoanSystem.pdb
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\netcoreapp3.1\StudentLoanSystem.genruntimeconfig.cache
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\netcoreapp3.1\StudentLoanSystem.csproj.CopyComplete
+C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\netcoreapp3.1\StudentLoanSystem.csprojAssemblyReference.cache
+C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\netcoreapp3.1\Razor\Pages\TestRedirectView.cshtml.g.cs
+C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\netcoreapp3.1\Razor\Views\Login\LoginView.cshtml.g.cs

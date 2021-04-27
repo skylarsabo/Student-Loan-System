@@ -1,10 +1,46 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    //ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome This is a test to see if changes get commmited</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h2>Home Page</h2>
+
+
+
+<!--<partial name="_LoginPage" /> -->
+
+
+@using (Html.BeginForm("login", "account"))
+
+{
+
+    <form method="post" asp-controller="Account" asp-action="login">
+        <table border="0" cellpadding="2" cellspacing="2">
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="username"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Login"></td>
+            </tr>
+        </table>
+    </form>
+    @ViewBag.error
+
+}
+
+<!--
+
+    index body content, the navbar is located _Layout.cshtml
+
+-->
+<br />
+<br />
+<br />
+
