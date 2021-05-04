@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "7332NQ76ZFMcoy/qd+u2sqzyc1UDcfu5bSu+ZR1UXith+6+7jMfdfLqmHuCd0hYXxQQSOpSC5XV4c8ctZxWrYQ==",
+  "dgSpecHash": "7rsIqsOtLzCovKOY3oinJRZ8RLMwYbJXG7Dyp+O8X7vxAeaJ+xim7YlBUUr8SAAIqqs/77L2jxK8In+BHP3/Eg==",
   "success": true,
   "projectFilePath": "C:\\Users\\skyla\\Documents\\Kettering\\Spring 2021\\CS 471\\Lab\\StudentLoanSystem\\StudentLoanSystem\\StudentLoanSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\skyla\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\skyla\\.nuget\\packages\\microsoft.aspnet.mvc\\5.2.7\\microsoft.aspnet.mvc.5.2.7.nupkg.sha512",
+    "C:\\Users\\skyla\\.nuget\\packages\\microsoft.aspnet.razor\\3.2.7\\microsoft.aspnet.razor.3.2.7.nupkg.sha512",
+    "C:\\Users\\skyla\\.nuget\\packages\\microsoft.aspnet.webpages\\3.2.7\\microsoft.aspnet.webpages.3.2.7.nupkg.sha512",
     "C:\\Users\\skyla\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\5.0.5\\microsoft.aspnetcore.diagnostics.entityframeworkcore.5.0.5.nupkg.sha512",
     "C:\\Users\\skyla\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\skyla\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
@@ -25,8 +28,8 @@
     "C:\\Users\\skyla\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.5\\microsoft.entityframeworkcore.analyzers.5.0.5.nupkg.sha512",
     "C:\\Users\\skyla\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.5\\microsoft.entityframeworkcore.design.5.0.5.nupkg.sha512",
     "C:\\Users\\skyla\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.5\\microsoft.entityframeworkcore.relational.5.0.5.nupkg.sha512",
-    "C:\\Users\\skyla\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.4\\microsoft.entityframeworkcore.sqlserver.5.0.4.nupkg.sha512",
-    "C:\\Users\\skyla\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.4\\microsoft.entityframeworkcore.tools.5.0.4.nupkg.sha512",
+    "C:\\Users\\skyla\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.5\\microsoft.entityframeworkcore.sqlserver.5.0.5.nupkg.sha512",
+    "C:\\Users\\skyla\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.5\\microsoft.entityframeworkcore.tools.5.0.5.nupkg.sha512",
     "C:\\Users\\skyla\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\skyla\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "C:\\Users\\skyla\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
@@ -52,6 +55,7 @@
     "C:\\Users\\skyla\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.templating\\5.0.2\\microsoft.visualstudio.web.codegeneration.templating.5.0.2.nupkg.sha512",
     "C:\\Users\\skyla\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.utils\\5.0.2\\microsoft.visualstudio.web.codegeneration.utils.5.0.2.nupkg.sha512",
     "C:\\Users\\skyla\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\5.0.2\\microsoft.visualstudio.web.codegenerators.mvc.5.0.2.nupkg.sha512",
+    "C:\\Users\\skyla\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512",
     "C:\\Users\\skyla\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\skyla\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\skyla\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
@@ -130,5 +134,46 @@
     "C:\\Users\\skyla\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\skyla\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Mvc 5.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Mvc",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Razor 3.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Razor",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.WebPages 3.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.WebPages",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Web.Infrastructure 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Web.Infrastructure",
+      "targetGraphs": [
+        "net5.0"
+      ]
+    }
+  ]
 }

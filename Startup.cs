@@ -4,6 +4,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Data.Sql;
+using StudentLoanSystem.Data;
+using Microsoft.Data.SqlClient;
+using System;
 
 namespace StudentLoanSystem
 {
@@ -14,6 +18,9 @@ namespace StudentLoanSystem
             Configuration = configuration;
         }
 
+
+        
+
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -22,9 +29,12 @@ namespace StudentLoanSystem
             services.AddRazorPages();
             services.AddControllersWithViews();
             services.AddSession();
-            //services.AddDatabaseDeveloperPageExceptionFilter();
-        }
+            
+            services.AddDbContext<AccountData>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("StudentLoanDB")));
 
+
+        }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {

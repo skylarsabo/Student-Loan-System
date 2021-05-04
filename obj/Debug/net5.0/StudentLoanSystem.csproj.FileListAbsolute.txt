@@ -134,7 +134,6 @@ C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\Stud
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\TestRedirectView.cshtml.g.cs
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\StudentLoanSystem.RazorTargetAssemblyInfo.cache
@@ -148,3 +147,11 @@ C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\Stud
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\Shared\_LoginPage.cshtml.g.cs
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\Shared\_Success.cshtml.g.cs
+C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\Other\TestRedirectView.cshtml.g.cs
+C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Web.Mvc.dll
+C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Web.Razor.dll
+C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Web.Helpers.dll
+C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Web.WebPages.Deployment.dll
+C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Web.WebPages.Razor.dll
+C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Web.WebPages.dll
+C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
