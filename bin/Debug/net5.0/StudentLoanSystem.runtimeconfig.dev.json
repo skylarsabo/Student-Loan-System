@@ -1,8 +1,8 @@
 {
   "runtimeOptions": {
     "additionalProbingPaths": [
-      "C:\\Users\\skyla\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\skyla\\.nuget\\packages",
+      "C:\\Users\\ngran\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\ngran\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ]
   }

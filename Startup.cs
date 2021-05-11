@@ -22,6 +22,8 @@ namespace StudentLoanSystem
             services.AddRazorPages();
             services.AddControllersWithViews();
             services.AddSession();
+            services.AddDbContext<StudentLoanSystem.Data.StudentLoanSystemContext>(options =>
+                  options.UseSqlServer(Configuration.GetConnectionString("StudentLoanSystemContext")));
             //services.AddDatabaseDeveloperPageExceptionFilter();
         }
 
