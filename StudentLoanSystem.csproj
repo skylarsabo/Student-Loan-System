@@ -33,7 +33,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="Pages\LoanOfficerMainView.cshtml.cs" />
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>

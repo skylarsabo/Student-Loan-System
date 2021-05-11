@@ -4,7 +4,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using StudentLoanSystem.Data;
 
 namespace StudentLoanSystem
 {
@@ -23,9 +22,6 @@ namespace StudentLoanSystem
             services.AddRazorPages();
             services.AddControllersWithViews();
             services.AddSession();
-
-            services.AddDbContext<StudentLoanSystemContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("StudentLoanSystemContext")));
             //services.AddDatabaseDeveloperPageExceptionFilter();
         }
 
