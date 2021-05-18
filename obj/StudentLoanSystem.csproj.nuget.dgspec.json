@@ -44,6 +44,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNet.Mvc": {
+              "target": "Package",
+              "version": "[5.2.7, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.5, )"
@@ -56,7 +60,7 @@
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.4, )"
+              "version": "[5.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite.Core": {
               "target": "Package",
@@ -66,7 +70,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.4, )"
+              "version": "[5.0.5, )"
             },
             "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
@@ -99,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

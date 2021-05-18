@@ -1,9 +1,24 @@
 {
   "dependencies": {
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2021-05-04T19:34:03.0581614Z"
+    },
     "mssql1": {
       "restored": true,
-      "restoreTime": "2021-05-04T15:58:30.1950529Z"
+      "restoreTime": "2021-05-04T19:34:11.28422Z"
     }
   },
-  "parameters": {}
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "0e044f9a-161b-45c1-9753-43743bc2aa15"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "student-loan-system-resources"
+    }
+  }
 }

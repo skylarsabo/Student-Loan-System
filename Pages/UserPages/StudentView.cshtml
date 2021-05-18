@@ -1,0 +1,50 @@
+﻿@page
+@model StudentLoanSystem.Data.AccountData
+@{
+    ViewData["Title"] = "";
+    //StudentLoanSystem.Data.AccountData accountData = new Data.AccountData();
+    //Data.AccountData.GrabUser()
+    @functions{
+        public void OnGet(Data.Users.Student student) 
+        {
+            System.Diagnostics.Debug.WriteLine(student.Username);
+            //Label userNameLabel = this.FindControl("StudentUsername") as Label;
+            //@Html.LabelFor( => )
+            //StudentLoanSystem.Data.Users.Student = student;
+        }
+
+    }
+
+    }
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+    </head>
+    <body>
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2>Left</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3>Left Inside Left</h3>
+                            @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.Username, StudentLoanSystem.Data.AccountData.CurrentStudent.Username, new { @class = "text-danger" })
+
+                        </div>
+                        <div class="col-md-6">
+                            <h3>Left Inside Left</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h2>Right</h2>
+                </div>
+            </div>
+        </div>
+
+
+
+    </body>
+</html>

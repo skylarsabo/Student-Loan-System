@@ -7,42 +7,27 @@ using System.Threading.Tasks;
 
 namespace StudentLoanSystem.Controllers
 {
-    [Route("account")]
     public class AccountController : Controller
     {
 
-        [Route("")]
-        [Route("index")]
-        [Route("~/")]
         public IActionResult Index()
         {
             return View();
         }
 
 
-        [Route("login")]
-        [HttpPost]
-        public IActionResult Login(string username, string password)
+
+
+        [Route("Login")]
+        public async Task<IActionResult> OnPostLoginAsync()
         {
-            
-            if (username != null && password != null && username.Equals("acc1") && password.Equals("123"))
-            {
-                HttpContext.Session.SetString("username", username);
-                return View("_Success");
-            }
-            else
-            {
-                ViewBag.error = "Invalid Account";
-                return View("Index");
-            }
+            System.Diagnostics.Debug.WriteLine("Login Sent To Data");
+
+            return View("../Pages/Other/TestRedirectView");
         }
 
-        [Route("logout")]
-        [HttpGet]
-        public IActionResult Logout()
-        {
-            HttpContext.Session.Remove("username");
-            return RedirectToAction("Index");
-        }
+
+
+
     }
 }

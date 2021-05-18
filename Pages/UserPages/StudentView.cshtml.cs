@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace StudentLoanSystem.Pages
+namespace StudentLoanSystem.Pages.UserPages
 {
-    public class TestRedirectViewModel : PageModel
+    public class StudentViewModel : PageModel
     {
         public void OnGet()
         {

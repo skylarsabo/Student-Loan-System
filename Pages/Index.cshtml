@@ -1,39 +1,59 @@
-﻿@page
-@model IndexModel
+﻿@page "{handler?}"
+@model StudentLoanSystem.Data.AccountData
 @{
-    //ViewData["Title"] = "Home page";
+
+
+
+    @functions{
+        public void OnGet() { }
+        public async Task<IActionResult> OnPostLoginAsync(Data.Users.BaseUser m)
+        {
+            //System.Diagnostics.Debug.WriteLine("Login Sent To Data");
+            //Clicking Login just redirects you (not verifying any data)
+            // Data.AccountData AccData
+            if (Data.AccountData.CheckLogin(m.Username, m.Password, m.Id))
+            {
+
+                switch (m.Id)
+                {
+                    //userType 1
+                    case 0:
+                        return RedirectToPage("UserPages/StudentView", Data.AccountData.Createuser(m.Username, m.Id) );
+                    //userType 2
+                    case 1:
+                        return RedirectToPage("Other/TestRedirectView");
+                    //userType 3
+                    case 2:
+                        return RedirectToPage("Other/TestRedirectView");
+                    default:
+                        return RedirectToPage("Other/TestRedirectView");
+                }
+
+
+            }
+            else
+            {
+                //System.Diagnostics.Debug.WriteLine(m.Username + " " + m.Id + " " + m.Password);
+                return RedirectToPage("Index");
+            }
+
+
+        }
+
+
+
+
+    }
 }
 
-<h2>Home Page</h2>
+
+<!--<h2>Home Page</h2>-->
 
 
 
-<!--<partial name="_LoginPage" /> -->
+<partial name="_LoginPage" />
 
 
-@using (Html.BeginForm("login", "account"))
-
-{
-
-    <form method="post" asp-controller="Account" asp-action="login">
-        <table border="0" cellpadding="2" cellspacing="2">
-            <tr>
-                <td>Username</td>
-                <td><input type="text" name="username"></td>
-            </tr>
-            <tr>
-                <td>Password</td>
-                <td><input type="password" name="password"></td>
-            </tr>
-            <tr>
-                <td>&nbsp;</td>
-                <td><input type="submit" value="Login"></td>
-            </tr>
-        </table>
-    </form>
-    @ViewBag.error
-
-}
 
 <!--
 
