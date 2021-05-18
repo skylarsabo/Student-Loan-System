@@ -13,10 +13,16 @@ namespace StudentLoanSystem
 {
     public class Program
     {
+
+        public static string SQLDataSoure = "student-loan-server.database.windows.net";
+        public static string SQLUserID = "student-loan-admin";
+        public static string SQLPassword = "Password123";
+        public static string SQLInitialCatalog = "student-loan-db";
+
         public static void Main(string[] args)
         {
             //Testing Connection to SQL
-            TestConnection();
+            //TestConnection();
 
             var host = CreateHostBuilder(args).Build();
             /*
@@ -48,17 +54,17 @@ namespace StudentLoanSystem
 
 
 
-
-        
+        // Overall Loading of data creating objects of people?
+       // public static void LoadData() { }
 
         public static void TestConnection()
         {
 
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            builder.DataSource = "student-loan-server.database.windows.net";
-            builder.UserID = "student-loan-admin";
-            builder.Password = "Password123";
-            builder.InitialCatalog = "student-loan-db";
+            builder.DataSource = SQLDataSoure;
+            builder.UserID = SQLUserID;
+            builder.Password = SQLPassword;
+            builder.InitialCatalog = SQLInitialCatalog;
 
 
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
@@ -77,6 +83,7 @@ namespace StudentLoanSystem
                             System.Diagnostics.Debug.WriteLine("Username: {0} Password: {1}", reader.GetString(0), reader.GetString(1));
                         }
                     }
+                    connection.Close();
                 }
                 System.Diagnostics.Debug.WriteLine("\n=================End Test Connection================\n");
 

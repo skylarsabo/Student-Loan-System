@@ -31,15 +31,15 @@ namespace StudentLoanSystem.Models
                 return;
             }
             
-            var studentList = new Student[]
+            /*r studentList = new Student[]
             {
                 new Student{Id=3,Username="student1",Password="test123"},
                 new Student{Id=4,Username="student2",Password="test123"},
                 new Student{Id=5,Username="student3",Password="test123"},
             };
-
-            dataContext.Students.AddRange(studentList);
-            dataContext.SaveChanges();
+            */
+           //dataContext.Students.AddRange(studentList);
+           //dataContext.SaveChanges();
             
         }
 

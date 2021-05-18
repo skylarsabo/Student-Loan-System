@@ -1,19 +1,53 @@
 ﻿@page "{handler?}"
 @model StudentLoanSystem.Data.AccountData
 @{
+
+
+
     @functions{
         public void OnGet() { }
-        public async Task<IActionResult> OnPostLoginAsync()
+        public async Task<IActionResult> OnPostLoginAsync(Data.Users.BaseUser m)
         {
             //System.Diagnostics.Debug.WriteLine("Login Sent To Data");
             //Clicking Login just redirects you (not verifying any data)
-            return RedirectToPage("Other/TestRedirectView");
+            // Data.AccountData AccData
+            if (Data.AccountData.CheckLogin(m.Username, m.Password, m.Id))
+            {
+
+                switch (m.Id)
+                {
+                    //userType 1
+                    case 0:
+                        return RedirectToPage("UserPages/StudentView", Data.AccountData.Createuser(m.Username, m.Id) );
+                    //userType 2
+                    case 1:
+                        return RedirectToPage("Other/TestRedirectView");
+                    //userType 3
+                    case 2:
+                        return RedirectToPage("Other/TestRedirectView");
+                    default:
+                        return RedirectToPage("Other/TestRedirectView");
+                }
+
+
+            }
+            else
+            {
+                //System.Diagnostics.Debug.WriteLine(m.Username + " " + m.Id + " " + m.Password);
+                return RedirectToPage("Index");
+            }
+
+
         }
+
+
+
+
     }
 }
 
 
-<h2>Home Page</h2>
+<!--<h2>Home Page</h2>-->
 
 
 
