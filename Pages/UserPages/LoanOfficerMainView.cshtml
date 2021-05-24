@@ -1,0 +1,47 @@
+@page
+@model StudentLoanSystem.Pages.Data.LoanOfficerMainViewModel
+
+@{
+    ViewData["Title"] = "LoanOfficerMainView";
+}
+
+<h1>Index</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LoanDatabase[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoanDatabase[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoanDatabase[0].Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoanDatabase[0].PostTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.LoanDatabase)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PostTime)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -6,15 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using StudentLoanSystem.Models;
-using StudentLoanSystem.Data;
+using StudentLoanSystem.Data.Users;
 
 namespace StudentLoanSystem.Pages.Data
 {
     public class CreateModel : PageModel
     {
-        private readonly StudentLoanSystem.Data.StudentLoanSystemContext _context;
+        private readonly StudentLoanSystem.Data.AccountData _context;
 
-        public CreateModel(StudentLoanSystem.Data.StudentLoanSystemContext context)
+        public CreateModel(StudentLoanSystem.Data.AccountData context)
         {
             _context = context;
         }
@@ -35,7 +35,7 @@ namespace StudentLoanSystem.Pages.Data
                 return Page();
             }
 
-            _context.Student.Add(database);
+            _context.Students.Add(database);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

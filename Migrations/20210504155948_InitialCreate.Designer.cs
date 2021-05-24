@@ -9,7 +9,7 @@ using StudentLoanSystem.Data;
 
 namespace StudentLoanSystem.Migrations
 {
-    [DbContext(typeof(StudentLoanSystemContext))]
+    [DbContext(typeof(AccountData))]
     [Migration("20210504155948_InitialCreate")]
     partial class InitialCreate
     {
@@ -23,7 +23,7 @@ namespace StudentLoanSystem.Migrations
 
             modelBuilder.Entity("StudentLoanSystem.Models.database", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -40,7 +40,7 @@ namespace StudentLoanSystem.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.ToTable("database");
                 });

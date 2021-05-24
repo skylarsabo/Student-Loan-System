@@ -8,8 +8,8 @@ using StudentLoanSystem.Data;
 
 namespace StudentLoanSystem.Migrations
 {
-    [DbContext(typeof(StudentLoanSystemContext))]
-    partial class StudentLoanSystemContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(AccountData))]
+    partial class AccountDataModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -21,7 +21,7 @@ namespace StudentLoanSystem.Migrations
 
             modelBuilder.Entity("StudentLoanSystem.Models.database", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
@@ -38,7 +38,7 @@ namespace StudentLoanSystem.Migrations
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.ToTable("database");
                 });

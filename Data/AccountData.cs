@@ -16,7 +16,7 @@ namespace StudentLoanSystem.Data
     {
 
         public static string SQLDataSoure = "student-loan-server.database.windows.net";
-        public static string SQLUserID = "student-loan-admin";
+        public static string SQLUserId = "student-loan-admin";
         public static string SQLPassword = "Password123";
         public static string SQLInitialCatalog = "student-loan-db";
 
@@ -31,6 +31,8 @@ namespace StudentLoanSystem.Data
          
 
         public DbSet<Student> Students { get; set; }
+        public DbSet<Loan> Loans { get; set; }
+
 
         //public DbSet<AccountData> Id { get; set; }
         //public DbSet<AccountData> Username { get; set; }
@@ -49,7 +51,7 @@ namespace StudentLoanSystem.Data
         {
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
             builder.DataSource = SQLDataSoure;
-            builder.UserID = SQLUserID;
+            builder.UserID = SQLUserId;
             builder.Password = SQLPassword;
             builder.InitialCatalog = SQLInitialCatalog;
 
@@ -96,7 +98,7 @@ namespace StudentLoanSystem.Data
         {
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
             builder.DataSource = SQLDataSoure;
-            builder.UserID = SQLUserID;
+            builder.UserID = SQLUserId;
             builder.Password = SQLPassword;
             builder.InitialCatalog = SQLInitialCatalog;
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))

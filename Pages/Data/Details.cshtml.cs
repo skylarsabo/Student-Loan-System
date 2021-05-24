@@ -6,15 +6,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using StudentLoanSystem.Models;
-using StudentLoanSystem.Data;
+using StudentLoanSystem.Data.Users;
 
 namespace StudentLoanSystem.Pages.Data
 {
     public class DetailsModel : PageModel
     {
-        private readonly StudentLoanSystem.Data.StudentLoanSystemContext _context;
+        private readonly StudentLoanSystem.Data.AccountData _context;
 
-        public DetailsModel(StudentLoanSystem.Data.StudentLoanSystemContext context)
+        public DetailsModel(StudentLoanSystem.Data.AccountData context)
         {
             _context = context;
         }
@@ -28,7 +28,7 @@ namespace StudentLoanSystem.Pages.Data
                 return NotFound();
             }
 
-            database = await _context.Student.FirstOrDefaultAsync(m => m.ID == id);
+            database = await _context.Students.FirstOrDefaultAsync(m => m.Id == id);
 
             if (database == null)
             {

@@ -7,15 +7,15 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using StudentLoanSystem.Models;
-using StudentLoanSystem.Data;
+using StudentLoanSystem.Data.Users;
 
 namespace StudentLoanSystem.Pages.Data
 {
     public class EditModel : PageModel
     {
-        private readonly StudentLoanSystem.Data.StudentLoanSystemContext _context;
+        private readonly StudentLoanSystem.Data.AccountData _context;
 
-        public EditModel(StudentLoanSystem.Data.StudentLoanSystemContext context)
+        public EditModel(StudentLoanSystem.Data.AccountData context)
         {
             _context = context;
         }
@@ -30,7 +30,7 @@ namespace StudentLoanSystem.Pages.Data
                 return NotFound();
             }
 
-            database = await _context.Student.FirstOrDefaultAsync(m => m.ID == id);
+            database = await _context.Students.FirstOrDefaultAsync(m => m.Id == id);
 
             if (database == null)
             {
@@ -56,7 +56,7 @@ namespace StudentLoanSystem.Pages.Data
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!databaseExists(database.ID))
+                if (!databaseExists(database.Id))
                 {
                     return NotFound();
                 }
@@ -71,7 +71,7 @@ namespace StudentLoanSystem.Pages.Data
 
         private bool databaseExists(int id)
         {
-            return _context.Student.Any(e => e.ID == id);
+            return _context.Students.Any(e => e.Id == id);
         }
     }
 }

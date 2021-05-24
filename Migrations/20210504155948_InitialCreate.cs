@@ -11,7 +11,7 @@ namespace StudentLoanSystem.Migrations
                 name: "database",
                 columns: table => new
                 {
-                    ID = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Name = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -20,7 +20,7 @@ namespace StudentLoanSystem.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_database", x => x.ID);
+                    table.PrimaryKey("PK_database", x => x.Id);
                 });
         }
 
