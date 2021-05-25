@@ -10,8 +10,6 @@ namespace StudentLoanSystem.Data.Users
     {
         //ID is usertype
         public int Id { get; set; }
-
-        [Display(Name="Username")]
         public string Username { get; set; }
 
 
@@ -19,6 +17,7 @@ namespace StudentLoanSystem.Data.Users
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int StudentID { get; set; }
+        public int creditScore { get; set; }
 
 
     }

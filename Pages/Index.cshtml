@@ -6,24 +6,23 @@
 
     @functions{
         public void OnGet() { }
+
         public async Task<IActionResult> OnPostLoginAsync(Data.Users.BaseUser m)
         {
-            //System.Diagnostics.Debug.WriteLine("Login Sent To Data");
-            //Clicking Login just redirects you (not verifying any data)
             // Data.AccountData AccData
-            if (Data.AccountData.CheckLogin(m.Username, m.Password, m.Id))
+            if (Data.AccountData.CheckLogin(m))
             {
 
                 switch (m.Id)
                 {
                     //userType 1
-                    case 0:
-                        return RedirectToPage("UserPages/StudentView", Data.AccountData.Createuser(m.Username, m.Id) );
-                    //userType 2
                     case 1:
+                        return RedirectToPage("UserPages/StudentView", Data.AccountData.CreateUser(m.Username, m.Id) );
+                    //userType 2
+                    case 2:
                         return RedirectToPage("Other/TestRedirectView");
                     //userType 3
-                    case 2:
+                    case 3:
                         return RedirectToPage("Other/TestRedirectView");
                     default:
                         return RedirectToPage("Other/TestRedirectView");

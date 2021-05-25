@@ -30,8 +30,8 @@ namespace StudentLoanSystem
             services.AddControllersWithViews();
             services.AddSession();
             
-            services.AddDbContext<AccountData>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("StudentLoanDB")));
+            //services.AddDbContext<AccountData>(options =>
+            //options.UseSqlServer(Configuration.GetConnectionString("StudentLoanDB")));
 
 
         }
