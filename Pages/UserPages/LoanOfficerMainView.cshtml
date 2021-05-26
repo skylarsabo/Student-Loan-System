@@ -7,6 +7,7 @@
 
 <h1>Index</h1>
 
+
 <table class="table">
     <thead>
         <tr>
@@ -15,6 +16,56 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.LoanDatabase[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoanDatabase[0].LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoanDatabase[0].Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoanDatabase[0].PostTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.LoanDatabase.Where(item => item.Approved == false))
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Amount)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PostTime)
+                </td>
+                <td>
+                    @Html.CheckBoxFor(modelItem => item.Approved, true)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LoanDatabase[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoanDatabase[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LoanDatabase[0].LastName)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.LoanDatabase[0].Amount)
@@ -33,13 +84,61 @@
                     @Html.DisplayFor(modelItem => item.Id)
                 </td>
                 <td>
+                    ""
                     @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Amount)
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.PostTime)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentDatabase[0].Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentDatabase[0].FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentDatabase[0].LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentDatabase[0].PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentDatabase[0].Email)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.StudentDatabase)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PhoneNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Email)
                 </td>
             </tr>
         }

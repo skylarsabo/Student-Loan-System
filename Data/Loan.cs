@@ -19,7 +19,7 @@ namespace StudentLoanSystem.Data
         public int StudentId { get; set; }
         public int Amount { get; set; }
         public DateTime PostTime { get; set; }
-
+        public Boolean Approved { get; set; }
 
     }
 }

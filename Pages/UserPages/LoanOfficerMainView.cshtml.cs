@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using StudentLoanSystem.Data.Users;
+using StudentLoanSystem.Data;
 
 namespace StudentLoanSystem.Pages.Data
 {
@@ -25,6 +25,12 @@ namespace StudentLoanSystem.Pages.Data
         {
             LoanDatabase = await _context.Loans.ToListAsync();
             StudentDatabase = await _context.Students.ToListAsync();
+        }
+
+        public void OnPost()
+        {
+            _context.Entry(LoanDatabase).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
+            _context.SaveChanges();
         }
     }
 }
