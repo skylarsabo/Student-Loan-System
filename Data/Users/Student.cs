@@ -6,16 +6,18 @@ using System.Threading.Tasks;
 
 namespace StudentLoanSystem.Data.Users
 {
-    public class Student : BaseUser
+    public class Student
     {
-        //Id is usertype
+        //ID is usertype
         public int Id { get; set; }
-
-        [Display(Name="Username")]
         public string Username { get; set; }
+
+
+
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public int StudentId { get; set; }
+        public int StudentID { get; set; }
+        public int creditScore { get; set; }
 
 
     }

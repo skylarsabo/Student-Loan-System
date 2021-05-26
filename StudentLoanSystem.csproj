@@ -7,16 +7,12 @@
 
   <ItemGroup>
     <Compile Remove="bin\**" />
-    <Compile Remove="Models\DB\**" />
     <Compile Remove="obj\**" />
     <Content Remove="bin\**" />
-    <Content Remove="Models\DB\**" />
     <Content Remove="obj\**" />
     <EmbeddedResource Remove="bin\**" />
-    <EmbeddedResource Remove="Models\DB\**" />
     <EmbeddedResource Remove="obj\**" />
     <None Remove="bin\**" />
-    <None Remove="Models\DB\**" />
     <None Remove="obj\**" />
   </ItemGroup>
 
@@ -35,6 +31,11 @@
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
     <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>

@@ -14,29 +14,6 @@ namespace StudentLoanSystem.Pages
         {
         }
 
-        public IActionResult Login(string username, string password)
-        {
-
-            if (ModelState.IsValid)
-            {
-                //using(DB_)
-            }
-
-            if (username != null && password != null && username.Equals("acc1") && password.Equals("123"))
-            {
-                HttpContext.Session.SetString("username", username);
-                return Page();
-                //return View("_Success");
-            }
-            else
-            {
-                return Page();
-                //ViewBag.error = "Invalid Account";
-                //return View("Index");
-            }
-        }
-
-
 
     }
 }

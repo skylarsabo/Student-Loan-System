@@ -5,7 +5,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using StudentLoanSystem.Data;
-using StudentLoanSystem.Models;
 using System;
 
 
@@ -25,22 +24,6 @@ namespace StudentLoanSystem
             //TestConnection();
 
             var host = CreateHostBuilder(args).Build();
-            /*
-            using (var scope = host.Services.CreateScope())
-            {
-                var serv = scope.ServiceProvider;
-                try
-                {
-                    var context = serv.GetRequiredService<AccountData>();
-                    context.Database.EnsureCreated();
-                    test_seed.AddStudents(context);
-                } catch(Exception ex)
-                {
-                    var logger = serv.GetRequiredService<ILogger<Program>>();
-                    logger.LogError(ex, "An Error Occured with Ensuring DB is there");
-                }
-            }
-            */
             host.Run();  
             
         }
