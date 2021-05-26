@@ -1,38 +1,48 @@
-﻿using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace StudentLoanProgram
+namespace StudentLoanTest
 {
     class PaymentCalculator
     {
-        var loanPrinciple = "";
-        var loanInterestRate = "";
-        var loanPaymentPeriod = "";
-        
-        public string getLoanPrinciple() { return loanPrinciple; }
-
-        public string getLoanInterestRate() { return loanInterestRate; }
-
-        public string getLoanPaymentPeriod() { return loanPaymentPeriod; }
-
-        private void setLoanPrinciple(string newLoanPrinciple) { loanPrinciple = newLoanPrinciple; }
-
-        private void setLoanInterestRate(string newLoanInterestRate) { loanInterestRate = newLoanInterestRate; }
-
-        private void setLoanPaymentPeriod(string newLoanPaymentPeriod) { loanPaymentPeriod = newLoanPaymentPeriod; }
-
-        public int calculatePayments(string loanPrinciple, string loanInterestRate, string loanPaymentPeriod)
+        //Returns a PaymentCalculation Object
+        public static PaymentCalculation calculatePayments(StudentLoan[] LoanArray)
         {
-            int paymentDue = 0;
-            return paymentDue;
+            PaymentCalculation calculation = new PaymentCalculation();
+
+            int numMonths = 12; //Make this a method argument
+            calculation.setMonthsDisplayed(numMonths);
+            int firstStartDate = LoanArray[0].getLoanPaymentPeriodStartDate();
+            //Find the earliest loan start date
+            for (int i = 1; i < LoanArray.Length; i++)
+            {
+                int currDate = LoanArray[i].getLoanPaymentPeriodStartDate();
+                if (currDate < firstStartDate) { firstStartDate = currDate; }
+            }
+
+            double[] totalOwed = new double[12];
+            double[] principalOwed = new double[12];
+            double[] interestOwed = new double[12];
+
+            for (int i = 0; i < numMonths; i++)
+            {
+                for (int j = 0; j < LoanArray.Length; j++)
+                {
+                    if (firstStartDate <= LoanArray[j].getLoanPaymentPeriodStartDate())
+                    {
+                        principalOwed[i] += ((double)LoanArray[j].getLoanPrinciple() / (double)LoanArray[j].getLoanPaymentPeriodLength());
+                        interestOwed[i] += (principalOwed[i] * (((double)LoanArray[j].getLoanInterestRate()) / 100));
+                    }
+                }
+                totalOwed[i] += (principalOwed[i] + interestOwed[i]);
+            }
+            calculation.setTotalAmountOwed(totalOwed);
+            calculation.setTotalPrincipalOwed(principalOwed);
+            calculation.setTotalInterestOwed(interestOwed);
+
+            return calculation;
         }
-
     }
-
 }
