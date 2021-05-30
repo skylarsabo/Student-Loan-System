@@ -23,7 +23,7 @@
                         return RedirectToPage("Other/TestRedirectView");
                     //userType 3
                     case 3:
-                        return RedirectToPage("Other/TestRedirectView");
+                        return RedirectToPage("UserPages/RegistrarView", Data.AccountData.CreateUser(m.Username, m.Id));
                     default:
                         return RedirectToPage("Other/TestRedirectView");
                 }

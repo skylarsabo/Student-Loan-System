@@ -22,7 +22,7 @@ namespace StudentLoanSystem.Data
 
         public static Student CurrentStudent { get; set; }
         //public static Bank currentBank { get; set; }
-        //public static Registar CurrentRegistar { get; set; }
+        public static Registrar CurrentRegistrar { get; set; }
 
         //public AccountData() { }
 
@@ -108,6 +108,39 @@ namespace StudentLoanSystem.Data
             return student;
         }
 
+
+        public static Registrar RetrieveRegistrarInformation(Registrar registrar)
+        {
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            builder.DataSource = SQLDataSoure;
+            builder.UserID = SQLUserID;
+            builder.Password = SQLPassword;
+            builder.InitialCatalog = SQLInitialCatalog;
+            using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            {
+                String sql = "SELECT username, firstName, lastName FROM RegistarTable";
+
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            if (reader.GetString(0).Trim().Equals(registrar.Username, StringComparison.OrdinalIgnoreCase))
+                            {
+                                registrar.FirstName = reader.GetString(1);
+                                registrar.LastName = reader.GetString(2);
+                                registrar.Username = registrar.Username;
+                            }
+                        }
+                    }
+                }
+            }
+            return registrar;
+        }
+
+
         public static Object CreateUser(String username, int id) 
         {
             switch (id)
@@ -124,7 +157,14 @@ namespace StudentLoanSystem.Data
                 case 2:
                     return null;
                 case 3:
-                    return null;
+                    Data.Users.Registrar registrar = new()
+                    {
+                        Username = username,
+                        Id = id
+                    };
+                    registrar = RetrieveRegistrarInformation(registrar);
+                    CurrentRegistrar = registrar;
+                    return registrar;
                 default:
                     return null;
             }
