@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using StudentLoanSystem.Models;
+//using StudentLoanSystem.Models;
 using StudentLoanSystem.Data.Users;
 
 namespace StudentLoanSystem.Pages.Data
@@ -35,8 +35,8 @@ namespace StudentLoanSystem.Pages.Data
                 return Page();
             }
 
-            _context.Students.Add(database);
-            await _context.SaveChangesAsync();
+            //_context.Students.Add(database);
+           // await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
         }

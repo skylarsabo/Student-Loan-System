@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using StudentLoanSystem.Models;
+//using StudentLoanSystem.Models;
 using StudentLoanSystem.Data.Users;
 
 namespace StudentLoanSystem.Pages.Data
@@ -30,7 +30,7 @@ namespace StudentLoanSystem.Pages.Data
                 return NotFound();
             }
 
-            database = await _context.Students.FirstOrDefaultAsync(m => m.Id == id);
+           // database = await _context.Students.FirstOrDefaultAsync(m => m.Id == id);
 
             if (database == null)
             {
@@ -48,30 +48,30 @@ namespace StudentLoanSystem.Pages.Data
                 return Page();
             }
 
-            _context.Attach(database).State = EntityState.Modified;
+            //_context.Attach(database).State = EntityState.Modified;
 
             try
             {
-                await _context.SaveChangesAsync();
+             //   await _context.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!databaseExists(database.Id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+              // if (!databaseExists(database.Id))
+              //  {
+              //      return NotFound();
+              //  }
+              //  else
+              //  {
+              //      throw;
+             //   }
             }
 
             return RedirectToPage("./Index");
         }
 
-        private bool databaseExists(int id)
-        {
-            return _context.Students.Any(e => e.Id == id);
-        }
+        //private bool databaseExists(int id)
+       // {
+           // return _context.Students.Any(e => e.Id == id);
+       // }
     }
 }

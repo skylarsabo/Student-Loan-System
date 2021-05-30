@@ -155,7 +155,6 @@ C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\Stud
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Web.WebPages.dll
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\UserPages\StudentView.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.csprojAssemblyReference.cache
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.AssemblyInfoInputs.cache
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.AssemblyInfo.cs
@@ -163,9 +162,6 @@ C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSyst
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.RazorAssemblyInfo.cache
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.RazorAssemblyInfo.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.dll
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\ref\StudentLoanSystem.dll
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.pdb
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\staticwebassets\StudentLoanSystem.StaticWebAssets.Manifest.cache
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\staticwebassets\StudentLoanSystem.StaticWebAssets.xml
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\scopedcss\bundle\StudentLoanSystem.styles.css
@@ -182,7 +178,6 @@ C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Oth
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Shared\_LoginPage.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Shared\_Success.cshtml.g.cs
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\UserPages\LoanOfficerMainView.cshtml.g.cs
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\UserPages\StudentView.cshtml.g.cs
@@ -190,11 +185,15 @@ C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\_Vi
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.RazorTargetAssemblyInfo.cache
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.RazorTargetAssemblyInfo.cs
+C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.dll
+C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\ref\StudentLoanSystem.dll
+C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.pdb
+C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.csprojAssemblyReference.cache
 C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\appsettings.json
 C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Pages\Properties\launchSettings.json
 C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Pages\Properties\serviceDependencies.json
 C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Pages\Properties\serviceDependencies.local.json
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\appsettings.json
 C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\StudentLoanSystem.exe
 C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\StudentLoanSystem.deps.json
 C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\StudentLoanSystem.runtimeconfig.json

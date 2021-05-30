@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
-using StudentLoanSystem.Models;
+//using StudentLoanSystem.Models;
 using StudentLoanSystem.Data.Users;
 
 namespace StudentLoanSystem.Pages.Data
@@ -28,7 +28,7 @@ namespace StudentLoanSystem.Pages.Data
                 return NotFound();
             }
 
-            database = await _context.Students.FirstOrDefaultAsync(m => m.Id == id);
+          //  database = await _context.Students.FirstOrDefaultAsync(m => m.Id == id);
 
             if (database == null)
             {

@@ -9,7 +9,7 @@ namespace StudentLoanSystem.Data.Users
     public class LoanOfficer : BaseUser
     {
         //Id is usertype
-        [Display(Name="Username")]
+       //Display(Name="Username")]
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int BankId { get; set; }

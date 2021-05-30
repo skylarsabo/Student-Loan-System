@@ -11,26 +11,35 @@ namespace StudentLoanSystem.Pages.Data
 {
     public class LoanOfficerMainViewModel : PageModel
     {
-        private readonly StudentLoanSystem.Data.AccountData _context;
+        private readonly AccountData _context;
 
-        public LoanOfficerMainViewModel(StudentLoanSystem.Data.AccountData context)
+        public LoanOfficerMainViewModel(AccountData context)
         {
             _context = context;
+            StudentDatabase = AccountData.RetrieveStudentList();
+            LoanDatabase = AccountData.RetrieveLoanList();
+            approved = new List<Loan>(LoanDatabase.Where(loan => loan.Approved == 1));
+            unapproved = new List<Loan>(LoanDatabase.Where(loan => loan.Approved == 0));
+            AboutToApprove = new int[] {1, 2, 3};
         }
 
-        public IList<StudentLoanSystem.Data.Loan> LoanDatabase { get; set; }
-        public IList<StudentLoanSystem.Data.Users.Student> StudentDatabase { get; set; }
+        public List<StudentLoanSystem.Data.Loan> LoanDatabase { get; set; }
+        public List<StudentLoanSystem.Data.Users.Student> StudentDatabase { get; set; }
+        public List<Loan> approved { get; set; }
+        [BindProperty]
+        public List<Loan> unapproved { get; set; }
+        public int[] AboutToApprove { get; set; }
 
-        public async Task OnGetAsync()
+        public async Task OnGet()
         {
-            LoanDatabase = await _context.Loans.ToListAsync();
-            StudentDatabase = await _context.Students.ToListAsync();
         }
 
-        public void OnPost()
+        public void OnPost(List<Loan> unapproved)
         {
-            _context.Entry(LoanDatabase).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-            _context.SaveChanges();
+            //foreach (var loan in LoanDatabase) 
+           // {
+           //     loan.Approved = loan.IsApproved ? 1 : 0;
+            //}
         }
     }
 }

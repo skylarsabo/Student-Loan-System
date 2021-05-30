@@ -10,16 +10,23 @@ namespace StudentLoanSystem.Data
     {
         //Id is usertype
         public int Id { get; set; }
-
+        public int StudentId { get; set; }
         //[Display(Name="Username")]
         public string Username { get; set; }
-
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public int StudentId { get; set; }
-        public int Amount { get; set; }
         public DateTime PostTime { get; set; }
-        public Boolean Approved { get; set; }
+        public int Principle { get; set; }
+        public int Rate { get; set; }
+        public int Start { get; set; }
+        public int Length { get; set; }
+        public int Approved { get; set; }
+        public bool IsApproved { get; set; }
+        
+        public void SetApproved() {
+            int result = (Approved == 0) ? 1 : 0;
+            Approved = result;
+        }
 
     }
 }
