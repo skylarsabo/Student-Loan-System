@@ -21,8 +21,12 @@ namespace StudentLoanSystem.Data
 
 
         public static Student CurrentStudent { get; set; }
+        public static List<Loan> LoanList { get; set; }
+        public static List<Loan> NotAssignedLoans { get; set; }
         //public static Bank currentBank { get; set; }
         //public static Registar CurrentRegistar { get; set; }
+
+        //Login Lock Boolean --
 
         //public AccountData() { }
 
@@ -83,7 +87,7 @@ namespace StudentLoanSystem.Data
             builder.InitialCatalog = SQLInitialCatalog;
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
-                String sql = "SELECT studentID, username, firstName, lastName, creditScore FROM StudentTable";
+                String sql = "SELECT studentID, username, firstName, lastName, creditScore, email FROM StudentTable";
 
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
@@ -100,16 +104,94 @@ namespace StudentLoanSystem.Data
                                 student.creditScore = reader.GetInt32(4);
                                 student.Username = student.Username;
                                 student.Id = student.Id;
+                                student.email = reader.GetString(5);
                             }
                         }
                     }
                 }
             }
+            List<Loan> tempList = new List<Loan>();
+            foreach (Loan loan in LoanList)
+            {
+                if (loan.studentId.Equals(student.StudentID))
+                {
+                    tempList.Add(loan);
+                }
+            }
+            student.studentLoans = tempList;
             return student;
+        }
+        public static void RetriveLoans()
+        {
+            List<Loan> tempList = new List<Loan>();
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            builder.DataSource = SQLDataSoure;
+            builder.UserID = SQLUserID;
+            builder.Password = SQLPassword;
+            builder.InitialCatalog = SQLInitialCatalog;
+            using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            {
+                String sql = "SELECT studentID, username, firstName, lastName, postTime, principle, rate, start, length, approved, name, assigned FROM LoanTable";
+                
+                /*
+                String rowAmtAssigned = "SELECT count(*) from LoanTable where columname = 'assigned'";
+
+                using (SqlCommand command = new SqlCommand(rowAmtAssigned, connection))
+                {
+                    connection.Open();
+                    count = (int)command.ExecuteScalar();                  
+                }
+                */
+
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int assignedCheck = reader.GetInt32(11);
+                            if (assignedCheck.Equals( 1 ))
+                            {
+                                Loan newLoan = new Loan()
+                                {
+                                    studentId = reader.GetInt32(0),
+                                    username = reader.GetString(1),
+                                    firstName = reader.GetString(2),
+                                    lastName = reader.GetString(3),
+                                    postTime = reader.GetDateTime(4),
+                                    principle = reader.GetInt32(5),
+                                    rate = reader.GetInt32(6),
+                                    start = reader.GetInt32(7),
+                                    length = reader.GetInt32(8),
+                                    approved = reader.GetInt32(9),
+                                    loanName = reader.GetString(10),
+                                    assigned = reader.GetInt32(11)
+                                };
+                                tempList.Add(newLoan);
+                            } else
+                            {
+                                Loan newLoan = new Loan()
+                                {
+                                    principle = reader.GetInt32(5),
+                                    rate = reader.GetInt32(6),
+                                    length = reader.GetInt32(8),
+                                    loanName = reader.GetString(10),
+                                    assigned = reader.GetInt32(11)
+                                };
+                                tempList.Add(newLoan);
+                            }
+                            
+                        }
+                    }
+                }
+            }
+            LoanList = tempList;
         }
 
         public static Object CreateUser(String username, int id) 
         {
+            RetriveLoans();
             switch (id)
             {
                 case 1:
