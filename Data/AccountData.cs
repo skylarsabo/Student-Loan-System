@@ -21,6 +21,8 @@ namespace StudentLoanSystem.Data
 
 
         public static Student CurrentStudent { get; set; }
+        public static LoanOfficer CurrentLoanOfficer { get; set; }
+        public static Registar CurrentRegistar { get; set; }
         public static List<Loan> LoanList { get; set; }
         public static List<Loan> NotAssignedLoans { get; set; }
         public static List<Loan> ApplyLoanList { get; set; }
@@ -120,6 +122,74 @@ namespace StudentLoanSystem.Data
             UpdateStudentLoanLists(student);
             return student;
         }
+        public static LoanOfficer RetriveLoanOfficerInformation(LoanOfficer loanOfficer)
+        {
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            builder.DataSource = SQLDataSoure;
+            builder.UserID = SQLUserID;
+            builder.Password = SQLPassword;
+            builder.InitialCatalog = SQLInitialCatalog;
+            using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            {
+                String sql = "SELECT bankId, username, firstName, lastName, email, phoneNumber FROM BankTable";
+
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            if (reader.GetString(1).Trim().Equals(loanOfficer.Username, StringComparison.OrdinalIgnoreCase))
+                            {
+                                loanOfficer.LoanOfficerId = reader.GetInt32(0);
+                                loanOfficer.FirstName = reader.GetString(2);
+                                loanOfficer.LastName = reader.GetString(3);
+                                loanOfficer.Username = loanOfficer.Username;
+                                loanOfficer.Id = loanOfficer.Id;
+                                loanOfficer.email = reader.GetString(4);
+                                loanOfficer.phoneNumber = reader.GetString(5);
+                            }
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            return loanOfficer;
+        }
+        public static Registar RetriveRegistarInformation(Registar registar)
+        {
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            builder.DataSource = SQLDataSoure;
+            builder.UserID = SQLUserID;
+            builder.Password = SQLPassword;
+            builder.InitialCatalog = SQLInitialCatalog;
+            using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            {
+                String sql = "SELECT username, firstName, lastName FROM RegistarTable";
+
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            if (reader.GetString(0).Trim().Equals(registar.Username, StringComparison.OrdinalIgnoreCase))
+                            {
+                                registar.FirstName = reader.GetString(1);
+                                registar.LastName = reader.GetString(2);
+                                registar.Username = registar.Username;
+                                registar.Id = registar.Id;
+                            }
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            return registar;
+        }
+
         public static void UpdateStudentLoanLists(Student student)
         {           
             List<Loan> tempList = new List<Loan>();
@@ -272,13 +342,34 @@ namespace StudentLoanSystem.Data
                     CurrentStudent = student;
                     return student;
                 case 2:
-                    return null;
+                    Data.Users.LoanOfficer loanOfficer = new()
+                    {
+                        Username = username,
+                        Id = id
+                    };
+                    loanOfficer = RetriveLoanOfficerInformation(loanOfficer);
+                    CurrentLoanOfficer = loanOfficer;
+                    return loanOfficer;
                 case 3:
-                    return null;
+                    Data.Users.Registar registar = new()
+                    {
+                        Username = username,
+                        Id = id
+                    };
+                    registar = RetriveRegistarInformation(registar);
+                    CurrentRegistar = registar;
+                    return registar;
                 default:
                     return null;
             }
   
         }
+
+
+
+
+
+
+
     }
 }

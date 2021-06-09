@@ -20,12 +20,12 @@
                         return RedirectToPage("UserPages/StudentView", Data.AccountData.CreateUser(m.Username, m.Id) );
                     //userType 2
                     case 2:
-                        return RedirectToPage("Other/TestRedirectView");
+                        return RedirectToPage("UserPages/LoanOfficerView", Data.AccountData.CreateUser(m.Username, m.Id) );
                     //userType 3
                     case 3:
-                        return RedirectToPage("Other/TestRedirectView");
+                        return RedirectToPage("UserPages/RegistarView", Data.AccountData.CreateUser(m.Username, m.Id) );
                     default:
-                        return RedirectToPage("Other/TestRedirectView");
+                        return RedirectToPage("Index");
                 }
 
 

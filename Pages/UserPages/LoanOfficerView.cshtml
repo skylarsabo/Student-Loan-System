@@ -1,0 +1,48 @@
+﻿@page "{handler?}"
+@model StudentLoanSystem.Data.AccountData
+@using System.Data
+@{
+    ViewData["Title"] = "LoanOfficer";
+    @functions{
+    }
+}
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                <h2>
+                    Hi @Html.Label(StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.FirstName, StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.FirstName, new { @class = "text-danger" }) @Html.Label(StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.LastName, StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.LastName, new { @class = "text-danger" }) welcome back!
+                </h2>
+                <div class="row">
+                    <!--Profile Information-->
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Profile Information for</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">@Html.Label(StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.FirstName, StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.FirstName) @Html.Label(StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.LastName, StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.LastName)</h6>
+                            <p class="card-text">
+                                Username: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.Username, StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.Username, new { @class = "text-danger" }) <br />
+                                UserType: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.Id.ToString(), StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.Id.ToString(), new { @class = "text-danger" }) <br />
+                                Phone Number: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.phoneNumber, StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.phoneNumber, new { @class = "text-danger" }) <br />
+                                Loan Officer ID: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.LoanOfficerId.ToString(), StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.LoanOfficerId.ToString(), new { @class = "text-danger" }) <br />
+                                Loan Officer Email: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.email, StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.email, new { @class = "text-danger" }) <br />
+                            </p>
+                        </div>
+                    </div>
+                    <br />
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="row">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Index"><button type="button" class="btn btn-danger">Logout?</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ </body>
+</html>

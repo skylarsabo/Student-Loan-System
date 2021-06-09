@@ -155,3 +155,5 @@ C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\Stud
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Web.WebPages.dll
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
 C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\UserPages\StudentView.cshtml.g.cs
+C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\UserPages\LoanOfficerView.cshtml.g.cs
+C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\UserPages\RegistarView.cshtml.g.cs
