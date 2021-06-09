@@ -27,21 +27,16 @@ namespace StudentLoanSystem.Data
         public static List<Loan> NotAssignedLoans { get; set; }
         public static List<Loan> ApplyLoanList { get; set; }
 
-
+        public static List<Loan> ReviewLoanList { get; set; }
 
         public static IEnumerable<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem> LoanListItems { get; set; }
 
         public static IEnumerable<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem> ApplyLoanListItems { get; set; }
         public static IEnumerable<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem> CurrentStudentLoanItems { get; set; }
 
-        //public static Bank currentBank { get; set; }
-        //public static Registar CurrentRegistar { get; set; }
 
-        //Login Lock Boolean --
+        public static IEnumerable<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem> ReviewLoanItems { get; set; }
 
-        //public AccountData() { }
-
-        //If check login good ---- grab user and create object to fill page from
         public static bool CheckLogin(Data.Users.BaseUser baseUser)
         {
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
@@ -155,6 +150,7 @@ namespace StudentLoanSystem.Data
                     connection.Close();
                 }
             }
+            UpdateLoanOfficerLoanLists(loanOfficer);
             return loanOfficer;
         }
         public static Registar RetriveRegistarInformation(Registar registar)
@@ -188,6 +184,26 @@ namespace StudentLoanSystem.Data
                 }
             }
             return registar;
+        }
+
+        public static void UpdateLoanOfficerLoanLists(LoanOfficer loanOfficer)
+        {
+            List<Loan> tempList = new List<Loan>();
+            List<Loan> tempList1 = new List<Loan>();
+            foreach (Loan loan in LoanList)
+            {
+                if (loan.assigned.Equals(1) && loan.approved.Equals(0))
+                {
+                    tempList.Add(loan);
+                }
+            }
+            loanOfficer.LoansNeedingReview = tempList;
+            IEnumerable<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem> tempReviewLoanList = loanOfficer.LoansNeedingReview.Select(s => new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem
+            {
+                Value = s.principle.ToString(),
+                Text = s.loanName + " for " + s.principle.ToString()
+            });
+            ReviewLoanItems = tempReviewLoanList;
         }
 
         public static void UpdateStudentLoanLists(Student student)
@@ -238,7 +254,7 @@ namespace StudentLoanSystem.Data
             builder.InitialCatalog = SQLInitialCatalog;
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
-                String sql = "SELECT studentID, username, firstName, lastName, postTime, principle, rate, start, length, approved, name, assigned FROM LoanTable";
+                String sql = "SELECT studentID, username, firstName, lastName, postTime, principle, rate, start, length, approved, name, assigned, creditScore FROM LoanTable";
                 
                 /*
                 String rowAmtAssigned = "SELECT count(*) from LoanTable where columname = 'assigned'";
@@ -273,7 +289,8 @@ namespace StudentLoanSystem.Data
                                     length = reader.GetInt32(8),
                                     approved = reader.GetInt32(9),
                                     loanName = reader.GetString(10),
-                                    assigned = reader.GetInt32(11)
+                                    assigned = reader.GetInt32(11),
+                                    creditScore = reader.GetInt32(12)
                                 };
                                 tempList.Add(newLoan);
                             } else
@@ -315,7 +332,7 @@ namespace StudentLoanSystem.Data
             builder.InitialCatalog = SQLInitialCatalog;
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
-                String sql = "UPDATE LoanTable SET studentId='" + student.StudentID + "',username='" + student.Username + "',firstName='" + student.FirstName + "',lastName='" + student.LastName + "',assigned='1' WHERE principle='" + student.loanApplyingFor.principle + "'";
+                String sql = "UPDATE LoanTable SET studentId='" + student.StudentID + "',username='" + student.Username + "',firstName='" + student.FirstName + "',lastName='" + student.LastName + "',assigned='1',creditScore='" + student.creditScore + "' WHERE principle='" + student.loanApplyingFor.principle + "'";
 
 
                 using (SqlCommand command = new SqlCommand(sql, connection))
@@ -326,6 +343,48 @@ namespace StudentLoanSystem.Data
                 }
             }
             UpdateStudentLoanLists(student);
+        }
+        public static void AcceptLoan(Loan loan, LoanOfficer loanOfficer)
+        {
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            builder.DataSource = SQLDataSoure;
+            builder.UserID = SQLUserID;
+            builder.Password = SQLPassword;
+            builder.InitialCatalog = SQLInitialCatalog;
+            using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            {
+                String sql = "UPDATE LoanTable SET approved='1' WHERE studentId='" + loan.studentId + "' AND name='" + loan.loanName + "'";
+
+
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            UpdateLoanOfficerLoanLists(loanOfficer);
+        }
+        public static void DenyLoan(Loan loan, LoanOfficer loanOfficer)
+        {
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            builder.DataSource = SQLDataSoure;
+            builder.UserID = SQLUserID;
+            builder.Password = SQLPassword;
+            builder.InitialCatalog = SQLInitialCatalog;
+            using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            {
+                String sql = "UPDATE LoanTable SET studentId=NULL, username=NULL, firstName=NULL, LastName=NULL, approved=0, assigned=0, creditScore=NULL WHERE studentId='" + loan.studentId + "' AND name='" + loan.loanName + "'";
+
+
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            UpdateLoanOfficerLoanLists(loanOfficer);
         }
         public static Object CreateUser(String username, int id) 
         {
@@ -367,7 +426,52 @@ namespace StudentLoanSystem.Data
 
 
 
-
+        public static void ResetDB()
+        {
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            builder.DataSource = SQLDataSoure;
+            builder.UserID = SQLUserID;
+            builder.Password = SQLPassword;
+            builder.InitialCatalog = SQLInitialCatalog;
+            using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            {
+                String sql = "UPDATE LoanTable SET studentId=NULL, username=NULL, firstName=NULL, LastName=NULL, approved=0, assigned=0, creditScore=NULL";
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+                String sql2 = "UPDATE LoanTable SET studentId='1111', username='student1', firstName='joe', LastName='jackson', approved='1', assigned='1', creditScore='750' WHERE Id = 1";
+                String sql3 = "UPDATE LoanTable SET studentId='1111', username='student1', firstName='joe', LastName='jackson', approved='0', assigned='1', creditScore='750' WHERE Id = 2";
+                String sql4 = "UPDATE LoanTable SET studentId='2222', username='student2', firstName='steve', LastName='smith', approved='1', assigned='1', creditScore='650' WHERE Id = 3";
+                String sql5 = "UPDATE LoanTable SET studentId='2222', username='student2', firstName='steve', LastName='smith', approved='0', assigned='1', creditScore='650' WHERE Id = 4";
+                using (SqlCommand command = new SqlCommand(sql2, connection))
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+                using (SqlCommand command = new SqlCommand(sql3, connection))
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+                using (SqlCommand command = new SqlCommand(sql4, connection))
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+                using (SqlCommand command = new SqlCommand(sql5, connection))
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+        }
 
 
 

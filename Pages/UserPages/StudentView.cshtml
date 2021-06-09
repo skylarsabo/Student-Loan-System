@@ -29,6 +29,7 @@
             }
             student.loanApplyingFor = tempLoan;
             Data.AccountData.ApplyForLoan(student);
+            RedirectToPage("UserPages/StudentView", Data.AccountData.CreateUser(student.Username, student.Id));
             //System.Diagnostics.Debug.WriteLine("TEST " + student.FirstName + " " + student.loanApplyingFor.loanName);
         }
         public async Task OnPostSelectAppliedAsync()

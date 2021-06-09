@@ -22,7 +22,7 @@ namespace StudentLoanSystem.Data
         public int approved { get; set; }
         public string loanName { get; set; }
         public int assigned { get; set; }
-
+        public int creditScore { get; set; }
 
 
     }
