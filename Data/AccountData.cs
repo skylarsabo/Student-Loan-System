@@ -23,6 +23,15 @@ namespace StudentLoanSystem.Data
         public static Student CurrentStudent { get; set; }
         public static List<Loan> LoanList { get; set; }
         public static List<Loan> NotAssignedLoans { get; set; }
+        public static List<Loan> ApplyLoanList { get; set; }
+
+
+
+        public static IEnumerable<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem> LoanListItems { get; set; }
+
+        public static IEnumerable<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem> ApplyLoanListItems { get; set; }
+        public static IEnumerable<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem> CurrentStudentLoanItems { get; set; }
+
         //public static Bank currentBank { get; set; }
         //public static Registar CurrentRegistar { get; set; }
 
@@ -51,7 +60,7 @@ namespace StudentLoanSystem.Data
                     {
                         while (reader.Read())
                         {
-                            System.Diagnostics.Debug.WriteLine("Username: {0} Password: {1} usertype: {2}", reader.GetString(0), reader.GetString(1), reader.GetInt32(2));
+                            //System.Diagnostics.Debug.WriteLine("Username: {0} Password: {1} usertype: {2}", reader.GetString(0), reader.GetString(1), reader.GetInt32(2));
                             if (reader.GetString(0).Trim().Equals(baseUser.Username, StringComparison.OrdinalIgnoreCase))
                             {
                                 //System.Diagnostics.Debug.WriteLine("Username: {0}", reader.GetString(0));
@@ -59,22 +68,19 @@ namespace StudentLoanSystem.Data
                                 {
                                     //System.Diagnostics.Debug.WriteLine("Password: {0}", reader.GetInt32(2));
                                     baseUser.Id = reader.GetInt32(2);
+                                    connection.Close();
                                     return true;
                                 }
                             }
 
                             
                         }
+                        connection.Close();
                         return false;
                     }
+
                 }
             }
-
-
-
-
-
-
 
         }
 
@@ -108,22 +114,53 @@ namespace StudentLoanSystem.Data
                             }
                         }
                     }
+                    connection.Close();
                 }
             }
+            UpdateStudentLoanLists(student);
+            return student;
+        }
+        public static void UpdateStudentLoanLists(Student student)
+        {           
             List<Loan> tempList = new List<Loan>();
+            List<Loan> tempList2 = new List<Loan>();
+            List<Loan> tempList3 = new List<Loan>();
             foreach (Loan loan in LoanList)
             {
                 if (loan.studentId.Equals(student.StudentID))
                 {
                     tempList.Add(loan);
+                    if (loan.approved.Equals(0))
+                    {
+                        tempList2.Add(loan);
+                    }
+                    else
+                    {
+                        tempList3.Add(loan);
+                    }
                 }
+
             }
             student.studentLoans = tempList;
-            return student;
+            student.ApplyForLoansList = tempList2;
+            student.currentStudentLoans = tempList3;
+            IEnumerable<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem> tempCurrentStudentLoanItems = student.currentStudentLoans.Select(s => new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem
+            {
+                Value = s.principle.ToString(),
+                Text = s.loanName + " for " + s.principle.ToString()
+            });
+            IEnumerable<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem> tempApplyLoanListItems = student.ApplyForLoansList.Select(s => new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem
+            {
+                Value = s.principle.ToString(),
+                Text = s.loanName + " for " + s.principle.ToString()
+            });
+            ApplyLoanListItems = tempApplyLoanListItems;
+            CurrentStudentLoanItems = tempCurrentStudentLoanItems;
         }
         public static void RetriveLoans()
         {
             List<Loan> tempList = new List<Loan>();
+            List<Loan> notAssignedTempList = new List<Loan>();
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
             builder.DataSource = SQLDataSoure;
             builder.UserID = SQLUserID;
@@ -180,15 +217,46 @@ namespace StudentLoanSystem.Data
                                     assigned = reader.GetInt32(11)
                                 };
                                 tempList.Add(newLoan);
+                                notAssignedTempList.Add(newLoan);
                             }
                             
                         }
                     }
+                    connection.Close();
                 }
             }
             LoanList = tempList;
-        }
+            NotAssignedLoans = notAssignedTempList;
+            IEnumerable<Microsoft.AspNetCore.Mvc.Rendering.SelectListItem> tempLoanListItems = NotAssignedLoans.Select(s => new Microsoft.AspNetCore.Mvc.Rendering.SelectListItem
+            {
+                Value = s.principle.ToString(),
+                Text = s.loanName + " for " + s.principle.ToString()
+            });
+            
+            LoanListItems = tempLoanListItems;
+            
+        }       
+        public static void ApplyForLoan(Student student)
+        {
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            builder.DataSource = SQLDataSoure;
+            builder.UserID = SQLUserID;
+            builder.Password = SQLPassword;
+            builder.InitialCatalog = SQLInitialCatalog;
+            using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            {
+                String sql = "UPDATE LoanTable SET studentId='" + student.StudentID + "',username='" + student.Username + "',firstName='" + student.FirstName + "',lastName='" + student.LastName + "',assigned='1' WHERE principle='" + student.loanApplyingFor.principle + "'";
 
+
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            UpdateStudentLoanLists(student);
+        }
         public static Object CreateUser(String username, int id) 
         {
             RetriveLoans();

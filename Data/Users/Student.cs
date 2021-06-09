@@ -20,8 +20,11 @@ namespace StudentLoanSystem.Data.Users
         public int creditScore { get; set; }
         public string email { get; set; }
 
-
+        public Loan loanApplyingFor { get; set; }
+        public List<Loan> ApplyForLoansList { get; set; }
+        public int SelectApplyForLoanValue { get; set; }
         public List<Loan> studentLoans { get; set; }
 
+        public List<Loan> currentStudentLoans { get; set; }
     }
 }

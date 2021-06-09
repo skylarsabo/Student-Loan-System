@@ -18,5 +18,7 @@ namespace StudentLoanSystem.Pages.UserPages
            // StudentLoanSystem.Data.Loan studentLoan = studentLoanList[0];
            // loanName = studentLoan.loanName;
         }
+
+
     }
 }

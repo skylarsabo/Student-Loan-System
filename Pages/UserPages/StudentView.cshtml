@@ -1,15 +1,63 @@
-﻿@page
+﻿@page "{handler?}"
 @model StudentLoanSystem.Data.AccountData
 @using System.Data
 @{
     ViewData["Title"] = "";
     @functions{
+        int i = 0;
+        int j = 0;
         public void OnGet(Data.Users.Student student)
         {
             //System.Diagnostics.Debug.WriteLine(student.Username);
             //DropDownList1.Items.Insert(0, new ListItem("Add New", ""));
             //@Html.DropDownList(StudentLoanSystem.Data.AccountData.)
 
+        }
+        public async Task OnPostSelectLoanAsync()
+        {
+            Data.Users.Student student = Data.AccountData.CurrentStudent;
+            String selectedValue = Request.Form["selectedLoanValue"];
+            List<Data.Loan> loanList = Data.AccountData.LoanList;
+            Data.Loan tempLoan = new Data.Loan();
+
+            foreach (Data.Loan loan in loanList)
+            {
+                if (loan.principle.ToString().Equals(selectedValue))
+                {
+                    tempLoan = loan;
+                }
+            }
+            student.loanApplyingFor = tempLoan;
+            Data.AccountData.ApplyForLoan(student);
+            //System.Diagnostics.Debug.WriteLine("TEST " + student.FirstName + " " + student.loanApplyingFor.loanName);
+        }
+        public async Task OnPostSelectAppliedAsync()
+        {
+            Data.Users.Student student = Data.AccountData.CurrentStudent;
+            String selectedValue = Request.Form["selectedAppliedforLoan"];
+            try
+            {
+                i = Int32.Parse(selectedValue) - 1;
+            }
+            catch(Exception e)
+            {
+
+            }
+
+
+        }
+        public async Task OnPostSelectCurrentAsync()
+        {
+            Data.Users.Student student = Data.AccountData.CurrentStudent;
+            String selectedValue = Request.Form["selectedCurrentLoan"];
+            try
+            {
+                j = Int32.Parse(selectedValue) - 1;
+            }
+            catch (Exception e)
+            {
+
+            }
         }
     }
 
@@ -28,6 +76,7 @@
                 </h2>
                 <div class="row">
                     <div class="col-md-4">
+                        <!--Profile Information-->
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Profile Information for</h5>
@@ -41,43 +90,98 @@
                                 </p>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
+                        <br />
+                        <!--Apply for Loans-->
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Apply for loan?</h5>
-                                
-                                
-                                <!--Non Grabbed Loans-->
-                                <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Loans Available
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <!--Drop Down Items Dynamically Added (non used items)-->
+                                <form asp-page-handler="SelectLoan" method="post" role="form">
+                                    <div class="input-group">
+                                        @Html.DropDownList(StudentLoanSystem.Data.AccountData.LoanListItems.ToString(), StudentLoanSystem.Data.AccountData.LoanListItems, "Loans Available", new { @class = "form-control", @onChange = "ApplyForLoan(this)" })<br />
+                                        <span class="input-group-btn">
+                                            <Button class="input-group-addon btn btn-default">Apply For Loan</Button>
+                                        </span>
+                                        <input type="hidden" name="selectedLoanValue" id="selectedLoanValue" runat="server" />
+                                        <script>
+                                            function ApplyForLoan(ddlObject) {
+                                                var selectedValue = ddlObject.value;
+                                                var selectedText = ddlObject.options[ddlObject.selectedIndex].innerHTML;
+                                                var hiddenField = document.getElementById('selectedLoanValue');
+                                                hiddenField.value = selectedValue;
+                                            }
+                                        </script>
                                     </div>
-                                </div>
-
-
-
+                                </form>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <!--Loans students already have-->
+                    <div class="col-md-6">
+                        <!--Loan Student Already Has-->
                         <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Loans Currently</h5>
-
-                                    <div class="card">
-                                        <div class="card-body">
-                                            @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.studentLoans[0].loanName, StudentLoanSystem.Data.AccountData.CurrentStudent.studentLoans[0].loanName, new { @class = "text-danger" }) <br />
-                                            @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.studentLoans[0].principle.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.studentLoans[0].principle.ToString(), new { @class = "text-danger" }) <br />
-                                            @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.studentLoans[0].start.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.studentLoans[0].start.ToString(), new { @class = "text-danger" }) <br />
-                                            @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.studentLoans[0].postTime.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.studentLoans[0].postTime.ToString(), new { @class = "text-danger" }) <br />
-                                        </div>
+                                <form asp-page-handler="SelectCurrent" method="post" role="form">
+                                    <div class="input-group">
+                                        @Html.DropDownList(StudentLoanSystem.Data.AccountData.CurrentStudentLoanItems.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudentLoanItems, "Your Loans", new { @class = "form-control", @onChange = "CurrentLoanListSelectedValue(this)" })<br />
+                                        <span class="input-group-btn">
+                                            <Button class="input-group-addon btn btn-default">See Loan Details</Button>
+                                        </span>
+                                        <input type="hidden" name="selectedCurrentLoan" id="selectedCurrentLoan" runat="server" />
+                                        <script>
+                                            function CurrentLoanListSelectedValue(ddlObject) {
+                                                var selectedIndex = ddlObject.selectedIndex
+                                                var hiddenField = document.getElementById('selectedCurrentLoan');
+                                                hiddenField.value = selectedIndex;
+                                            }
+                                        </script>
                                     </div>
+                                </form>
+                                <br />
+                                <div class="card">
+                                    <div class="card-body">
+                                        @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.currentStudentLoans[j].loanName, StudentLoanSystem.Data.AccountData.CurrentStudent.currentStudentLoans[j].loanName, new { @class = "text-danger" }) <br />
+                                        Principle: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.currentStudentLoans[j].principle.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.currentStudentLoans[j].principle.ToString(), new { @class = "text-danger" }) <br />
+                                        Start Date: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.currentStudentLoans[j].start.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.currentStudentLoans[j].start.ToString(), new { @class = "text-danger" }) <br />
+                                        Date Posted: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.currentStudentLoans[j].postTime.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.currentStudentLoans[j].postTime.ToString(), new { @class = "text-danger" }) <br />
+                                        Pay Amount / Due Date: <br />
+                                    </div>
+                                </div>
+                                <br />
+                                <button type="button" class="btn btn-success">Pay Loan</button>
 
+                            </div>
+                        </div>
+                        <br />
+                        <!--Loan applied for-->
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Loan Applying for</h5>
+                                <form asp-page-handler="SelectApplied" method="post" role="form">
+                                    <div class="input-group">
+                                        @Html.DropDownList(StudentLoanSystem.Data.AccountData.ApplyLoanListItems.ToString(), StudentLoanSystem.Data.AccountData.ApplyLoanListItems, "Your Loans", new { @class = "form-control", @onChange = "LoanListSelectedValue(this)" })<br />
+                                        <span class="input-group-btn">
+                                            <Button class="input-group-addon btn btn-default">See Loan Details</Button>
+                                        </span>
+                                        <input type="hidden" name="selectedAppliedforLoan" id="selectedAppliedforLoan" runat="server" />
+                                        <script>
+                                            function LoanListSelectedValue(ddlObject) {
+                                                var selectedIndex = ddlObject.selectedIndex
+                                                var hiddenField = document.getElementById('selectedAppliedforLoan');
+                                                hiddenField.value = selectedIndex;
+                                            }
+                                        </script>
+                                    </div>
+                                </form>
+                                <br />
+                                <div class="card">
+                                    <div class="card-body">
+                                        @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].loanName, StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].loanName, new { @class = "text-danger" }) <br />
+                                        Principle: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].principle.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].principle.ToString(), new { @class = "text-danger" }) <br />
+                                        Start Date: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].start.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].start.ToString(), new { @class = "text-danger" }) <br />
+                                        Date Posted: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].postTime.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].postTime.ToString(), new { @class = "text-danger" }) <br />
+                                        Approved? [1=yes,0=no]: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].approved.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].approved.ToString(), new { @class = "text-danger" }) <br />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
