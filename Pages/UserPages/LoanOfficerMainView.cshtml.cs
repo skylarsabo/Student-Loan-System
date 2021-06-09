@@ -60,18 +60,20 @@ namespace StudentLoanSystem.Pages.UserPages
                 foreach (var item in this.unapproved.ToList())
                 {
                     if (item.Approved == 1) {
-                        sql += "'" + item.Id.ToString() + "' OR Id='";
-                      //  this.unapproved.Remove(item);
-                      // this.approved.Add(item);
+                        sql += "'" + item.Id.ToString() + "' OR Id=";
+                      this.unapproved.Remove(item);
+                      this.approved.Add(item);
                     }
                 }
                 
-                sql = sql.Substring(0, sql.Length - 8);
+                sql = sql.Substring(0, sql.Length - 7);
                // sql += ";";
 
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
                     connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
                 }
             }
             return Page();
