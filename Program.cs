@@ -13,8 +13,8 @@ namespace StudentLoanSystem
     public class Program
     {
 
-        public static string SQLDataSoure = "student-loan-server.database.windows.net";
-        public static string SQLUserID = "student-loan-admin";
+        public static string SQLDataSource = "student-loan-server.database.windows.net";
+        public static string SQLUserId = "student-loan-admin";
         public static string SQLPassword = "Password123";
         public static string SQLInitialCatalog = "student-loan-db";
 
@@ -44,8 +44,8 @@ namespace StudentLoanSystem
         {
 
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            builder.DataSource = SQLDataSoure;
-            builder.UserID = SQLUserID;
+            builder.DataSource = SQLDataSource;
+            builder.UserID = SQLUserId;
             builder.Password = SQLPassword;
             builder.InitialCatalog = SQLInitialCatalog;
 

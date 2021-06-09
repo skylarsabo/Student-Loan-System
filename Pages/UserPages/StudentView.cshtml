@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "";
     @functions{
-        public void OnGet(Data.Users.Student student) 
+        public void OnGet(StudentLoanSystem.Data.Users.Student student) 
         {
             //System.Diagnostics.Debug.WriteLine(student.Username);
         }
@@ -29,7 +29,7 @@
                             UserType: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.Id.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.Id.ToString(), new { @class = "text-danger" }) <br/>
                             First Name: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.FirstName, StudentLoanSystem.Data.AccountData.CurrentStudent.FirstName, new { @class = "text-danger" }) <br/>
                             Last Name: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.LastName, StudentLoanSystem.Data.AccountData.CurrentStudent.LastName, new { @class = "text-danger" }) <br/>
-                            Credit Score: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.creditScore.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.creditScore.ToString(), new { @class = "text-danger" }) <br/>
+                            Credit Score: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.CreditScore.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.CreditScore.ToString(), new { @class = "text-danger" }) <br/>
                             Student ID: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.StudentID.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.StudentID.ToString(), new { @class = "text-danger" }) <br/>
                         </div>
                         <div class="col-md-6">

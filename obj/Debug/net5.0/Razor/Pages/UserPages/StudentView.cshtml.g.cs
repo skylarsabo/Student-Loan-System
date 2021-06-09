@@ -19,7 +19,7 @@ using StudentLoanSystem;
 #line default
 #line hidden
 #nullable disable
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"3477a218185d22db59d950fb9b6f216512aa88f2", @"/Pages/UserPages/StudentView.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"638956c000da2d22b97e52fe7ae8bcc0ceccebd7", @"/Pages/UserPages/StudentView.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"0e79b79a89d56235d416760a6fc2ef4a7f223da7", @"/Pages/_ViewImports.cshtml")]
     public class Pages_UserPages_StudentView : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
@@ -164,7 +164,7 @@ using StudentLoanSystem;
 #nullable restore
 #line 5 "C:\Users\cnova\source\repos\Student-Loan-System\Pages\UserPages\StudentView.cshtml"
                
-        public void OnGet(Data.Users.Student student) 
+        public void OnGet(StudentLoanSystem.Data.Users.Student student) 
         {
             //System.Diagnostics.Debug.WriteLine(student.Username);
         }
