@@ -57,14 +57,14 @@ namespace StudentLoanSystem.Pages.UserPages
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
                 String sql = "UPDATE LoanTable" +
-                    " SET Approved=1" +
+                    " SET approved=1" +
                     " WHERE Id=";
                 foreach (var item in this.unapproved.ToList())
                 {
                     if (item.Approved == 1) {
                         sql += " " + item.Id.ToString() + " OR Id=";
-                        this.unapproved.Remove(item);
-                        this.approved.Add(item);
+                      //  this.unapproved.Remove(item);
+                      // this.approved.Add(item);
                     }
                 }
                 
