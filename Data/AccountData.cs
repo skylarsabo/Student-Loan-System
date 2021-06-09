@@ -199,7 +199,7 @@ namespace StudentLoanSystem.Data
             builder.InitialCatalog = SQLInitialCatalog;
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
-                String sql = "SELECT * FROM LoanTable WHERE assigned=1;";
+                String sql = "SELECT * FROM LoanTable WHERE assigned=1";
 
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
