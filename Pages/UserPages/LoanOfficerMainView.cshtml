@@ -1,198 +1,205 @@
 @page
-@model StudentLoanSystem.Pages.Data.LoanOfficerMainViewModel
+@model StudentLoanSystem.Pages.UserPages.LoanOfficerMainViewModel
 
 @{
     ViewData["Title"] = "LoanOfficerMainView";
 }
 
 <h1>Loans For Review</h1>
-
-<form action="" method="post">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayName("Student ID")
-                </th>
-                <th>
-                    @Html.DisplayName("First Name")
-                </th>
-                <th>
-                    @Html.DisplayName("Last Name")
-                </th>
-                <th>
-                    @Html.DisplayName("Post Time")
-                </th>
-                <th>
-                    @Html.DisplayName("Principle")
-                </th>
-                <th>
-                    @Html.DisplayName("Interest Rate")
-                </th>
-                <th>
-                    @Html.DisplayName("Start Date")
-                </th>
-                <th>
-                    @Html.DisplayName("Length")
-                </th>
-                <th>
-                    @Html.DisplayName("Approve")
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-
-            @foreach (var item in Model.unapproved)
-            {
+<div>
+    <form method="post">
+        <table class="table">
+            <thead>
                 <tr>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.StudentId)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.FirstName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.LastName)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.PostTime)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Principle)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Rate)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Start)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.Length)
-                    </td>
-                    <td>
-                        <input type="checkbox" id="myCheck" onclick=@Model.AboutToApprove.Append(item.Id)>
-                    </td>
+                    <th>
+                        @Html.DisplayName("Student ID")
+                    </th>
+                    <th>
+                        @Html.DisplayName("First Name")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Last Name")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Post Time")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Principle")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Interest Rate")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Start Date")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Length")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Approve")
+                    </th>
                 </tr>
-            }
-        </tbody>
-    </table>
-    <input type="submit" name="Approve" value="Approve Selected" />
-</form>
+            </thead>
+            <tbody>
+                <div class="form-check-inline">
+                    @{
+                        var count = 0; 
+                        foreach(var item in Model.unapproved)
+                        {
+                            //var approve = Model.AboutToApprove[item.Id - 1];
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.StudentId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FirstName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.LastName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PostTime)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Principle)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Rate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Start)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Length)
+                                </td>
+                                <td>
+                                    <input type="checkbox" value="@Model.unapproved[count].IsApproved" name="ApproveArray" />
+                                </td>
 
-<h1>Approved Loans</h1>
+                            </tr>
+                            count++;
+                        }
+                     }
+            </tbody>
+        </table>
+        <input type="submit" value="submit" />
+     </form>
+</div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayName("Student ID")
-            </th>
-            <th>
-                @Html.DisplayName("First Name")
-            </th>
-            <th>
-                @Html.DisplayName("Last Name")
-            </th>
-            <th>
-                @Html.DisplayName("Post Time")
-            </th>
-            <th>
-                @Html.DisplayName("Principle")
-            </th>
-            <th>
-                @Html.DisplayName("Interest Rate")
-            </th>
-            <th>
-                @Html.DisplayName("Start Date")
-            </th>
-            <th>
-                @Html.DisplayName("Length")
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.approved)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.StudentId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FirstName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LastName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PostTime)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Principle)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Rate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Start)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Length)
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+        <h1>Approved Loans</h1>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayName("Student ID")
+                    </th>
+                    <th>
+                        @Html.DisplayName("First Name")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Last Name")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Post Time")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Principle")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Interest Rate")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Start Date")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Length")
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.approved)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StudentId)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LastName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PostTime)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Principle)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Rate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Start)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Length)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
 
 
-<h1>Students</h1>
+        <h1>Students</h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayName("Student ID")
-            </th>
-            <th>
-                @Html.DisplayName("First Name")
-            </th>
-            <th>
-                @Html.DisplayName("Last Name")
-            </th>
-            <th>
-                @Html.DisplayName("Credit Score")
-            </th>
-            <th>
-                @Html.DisplayName("Phone Number")
-            </th>
-            <th>
-                @Html.DisplayName("Email")
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.StudentDatabase)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.StudentID)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FirstName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LastName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CreditScore)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.PhoneNumber)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Email)
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayName("Student ID")
+                    </th>
+                    <th>
+                        @Html.DisplayName("First Name")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Last Name")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Credit Score")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Phone Number")
+                    </th>
+                    <th>
+                        @Html.DisplayName("Email")
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.StudentDatabase)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StudentID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FirstName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LastName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.CreditScore)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PhoneNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>

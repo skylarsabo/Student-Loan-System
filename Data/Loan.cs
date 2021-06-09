@@ -22,11 +22,5 @@ namespace StudentLoanSystem.Data
         public int Length { get; set; }
         public int Approved { get; set; }
         public bool IsApproved { get; set; }
-        
-        public void SetApproved() {
-            int result = (Approved == 0) ? 1 : 0;
-            Approved = result;
-        }
-
     }
 }
