@@ -17,8 +17,16 @@ namespace StudentLoanSystem.Data.Users
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int StudentID { get; set; }
+        public int creditScore { get; set; }
+        public string email { get; set; }
+
+        public Loan loanApplyingFor { get; set; }
+        public List<Loan> ApplyForLoansList { get; set; }
+        public int SelectApplyForLoanValue { get; set; }
+        public List<Loan> studentLoans { get; set; }
         public int CreditScore { get; set; }
         public int Balance { get; set; }
 
+        public List<Loan> currentStudentLoans { get; set; }
     }
 }
