@@ -313,3 +313,11 @@ C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\ref\StudentLoan
 C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.pdb
 C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.genruntimeconfig.cache
 C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\UserPages\RegistrarView.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Data\Create.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Data\Delete.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Data\Details.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Data\Edit.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\UserPages\LoanOfficerMainView.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Pages\Properties\launchSettings.json
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Pages\Properties\serviceDependencies.json
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Pages\Properties\serviceDependencies.local.json

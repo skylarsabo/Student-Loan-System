@@ -1,14 +1,7 @@
 ﻿@page
-@model StudentLoanSystem.Data.AccountData
+@model StudentLoanSystem.Pages.Data.RegistrarViewModel
 @{
     ViewData["Title"] = "";
-    @functions{
-        public void OnGet(Data.Users.Registrar registrar)
-        {
-            //System.Diagnostics.Debug.WriteLine(registrar.Username);
-        }
-
-    }
 
     }
 <html>
@@ -21,7 +14,6 @@
     <div class="container">
         <div class="row">
             <div class="col-md-8">
-                <h2>Left</h2>
                 <div class="row">
                     <div class="col-md-6">
                         <h3>Your Info</h3>
@@ -30,18 +22,80 @@
                         First Name: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentRegistrar.FirstName, StudentLoanSystem.Data.AccountData.CurrentRegistrar.FirstName, new { @class = "text-danger" }) <br />
                         Last Name: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentRegistrar.LastName, StudentLoanSystem.Data.AccountData.CurrentRegistrar.LastName, new { @class = "text-danger" }) <br />
                     </div>
-                    <div class="col-md-6">
-                        <h3>Student List</h3>
-                    </div>
                 </div>
-            </div>
-            <div class="col-md-4">
-                <h2>Right</h2>
             </div>
         </div>
     </div>
 
+    <h1>Loans</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayName("Student ID")
+                </th>
+                <th>
+                    @Html.DisplayName("First Name")
+                </th>
+                <th>
+                    @Html.DisplayName("Last Name")
+                </th>
+                <th>
+                    @Html.DisplayName("Post Time")
+                </th>
+                <th>
+                    @Html.DisplayName("Principle")
+                </th>
+                <th>
+                    @Html.DisplayName("Interest Rate")
+                </th>
+                <th>
+                    @Html.DisplayName("Start Date")
+                </th>
+                <th>
+                    @Html.DisplayName("Length")
+                </th>
+                <th>
+                    @Html.DisplayName("Approved")
+                </th>
+            </tr>
+        </thead>
+        <tbody>
 
+            @foreach (var item in Model.LoanDatabase)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StudentId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PostTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Principle)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Rate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Start)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Length)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Approved)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 
 </body>
 </html>

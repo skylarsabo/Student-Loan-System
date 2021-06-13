@@ -233,7 +233,7 @@ namespace StudentLoanSystem.Data
         public static Registrar RetrieveRegistrarInformation(Registrar registrar)
         {
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            builder.DataSource = SQLDataSoure;
+            builder.DataSource = "student-loan-server.database.windows.net";
             builder.UserID = SQLUserID;
             builder.Password = SQLPassword;
             builder.InitialCatalog = SQLInitialCatalog;
