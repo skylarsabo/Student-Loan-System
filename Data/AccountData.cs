@@ -94,7 +94,7 @@ namespace StudentLoanSystem.Data
             builder.InitialCatalog = SQLInitialCatalog;
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
-                String sql = "SELECT studentID, username, firstName, lastName, CreditScore, email, phoneNumber FROM StudentTable";
+                String sql = "SELECT studentID, username, firstName, lastName, CreditScore, email, PhoneNumber FROM StudentTable";
 
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
@@ -113,7 +113,7 @@ namespace StudentLoanSystem.Data
                                 student.PhoneNumber = reader.GetString(6);
                                 student.Username = student.Username;
                                 student.Id = student.Id;
-                                student.email = reader.GetString(5);
+                                student.Email = reader.GetString(5);
                             }
                         }
                     }
@@ -159,6 +159,46 @@ namespace StudentLoanSystem.Data
             return officer;
         }
 
+        public static List<Loan> RetrieveLoanList()
+        {
+            Loans = new List<Loan>();
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            builder.DataSource = SQLDataSource;
+            builder.UserID = SQLUserID;
+            builder.Password = SQLPassword;
+            builder.InitialCatalog = SQLInitialCatalog;
+            using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            {
+                String sql = "SELECT * FROM LoanTable WHERE assigned=1";
+
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Loan loan = new Loan();
+                            loan.Id = reader.GetInt32(0);
+                            loan.StudentId = reader.GetInt32(1);
+                            loan.Username = reader.GetString(2);
+                            loan.FirstName = reader.GetString(3);
+                            loan.LastName = reader.GetString(4);
+                            loan.PostTime = reader.GetDateTime(5);
+                            loan.Principle = reader.GetInt32(6);
+                            loan.Rate = reader.GetInt32(7);
+                            loan.Start = reader.GetInt32(8);
+                            loan.Length = reader.GetInt32(9);
+                            loan.Approved = reader.GetInt32(10);
+                            Loans.Add(loan);
+                        }
+                    }
+                }
+            }
+            return Loans;
+        }
+
+
 
 
 
@@ -198,16 +238,17 @@ namespace StudentLoanSystem.Data
             }
             return Students;
         }
+
         public static LoanOfficer RetriveLoanOfficerInformation(LoanOfficer loanOfficer)
         {
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            builder.DataSource = SQLDataSoure;
+            builder.DataSource = SQLDataSource;
             builder.UserID = SQLUserID;
             builder.Password = SQLPassword;
             builder.InitialCatalog = SQLInitialCatalog;
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
-                String sql = "SELECT bankId, username, firstName, lastName, email, phoneNumber FROM BankTable";
+                String sql = "SELECT bankId, username, firstName, lastName, email, PhoneNumber FROM BankTable";
 
                 using (SqlCommand command = new SqlCommand(sql, connection))
                 {
@@ -223,8 +264,8 @@ namespace StudentLoanSystem.Data
                                 loanOfficer.LastName = reader.GetString(3);
                                 loanOfficer.Username = loanOfficer.Username;
                                 loanOfficer.Id = loanOfficer.Id;
-                                loanOfficer.email = reader.GetString(4);
-                                loanOfficer.phoneNumber = reader.GetString(5);
+                                loanOfficer.Email = reader.GetString(4);
+                                loanOfficer.PhoneNumber = reader.GetString(5);
                             }
                         }
                     }
@@ -237,7 +278,7 @@ namespace StudentLoanSystem.Data
         public static Registar RetriveRegistarInformation(Registar registar)
         {
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            builder.DataSource = SQLDataSoure;
+            builder.DataSource = SQLDataSource;
             builder.UserID = SQLUserID;
             builder.Password = SQLPassword;
             builder.InitialCatalog = SQLInitialCatalog;
@@ -329,7 +370,7 @@ namespace StudentLoanSystem.Data
             List<Loan> tempList = new List<Loan>();
             List<Loan> notAssignedTempList = new List<Loan>();
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            builder.DataSource = SQLDataSoure;
+            builder.DataSource = SQLDataSource;
             builder.UserID = SQLUserID;
             builder.Password = SQLPassword;
             builder.InitialCatalog = SQLInitialCatalog;
@@ -407,7 +448,7 @@ namespace StudentLoanSystem.Data
         public static void ApplyForLoan(Student student)
         {
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            builder.DataSource = SQLDataSoure;
+            builder.DataSource = SQLDataSource;
             builder.UserID = SQLUserID;
             builder.Password = SQLPassword;
             builder.InitialCatalog = SQLInitialCatalog;
@@ -428,7 +469,7 @@ namespace StudentLoanSystem.Data
         public static void AcceptLoan(Loan loan, LoanOfficer loanOfficer)
         {
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            builder.DataSource = SQLDataSoure;
+            builder.DataSource = SQLDataSource;
             builder.UserID = SQLUserID;
             builder.Password = SQLPassword;
             builder.InitialCatalog = SQLInitialCatalog;
@@ -449,7 +490,7 @@ namespace StudentLoanSystem.Data
         public static void DenyLoan(Loan loan, LoanOfficer loanOfficer)
         {
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            builder.DataSource = SQLDataSoure;
+            builder.DataSource = SQLDataSource;
             builder.UserID = SQLUserID;
             builder.Password = SQLPassword;
             builder.InitialCatalog = SQLInitialCatalog;
@@ -510,7 +551,7 @@ namespace StudentLoanSystem.Data
         public static void ResetDB()
         {
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            builder.DataSource = SQLDataSoure;
+            builder.DataSource = SQLDataSource;
             builder.UserID = SQLUserID;
             builder.Password = SQLPassword;
             builder.InitialCatalog = SQLInitialCatalog;

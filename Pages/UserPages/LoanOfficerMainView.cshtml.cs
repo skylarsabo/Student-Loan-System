@@ -22,6 +22,7 @@ namespace StudentLoanSystem.Pages.UserPages
             denied = new List<Loan>(LoanDatabase.Where(loan => loan.Approved == 2));
             unapproved = new List<Loan>(LoanDatabase.Where(loan => loan.Approved == 0));
             ApproveArray = new string[unapproved.Count];
+            RiskResult = "";
         }
 
         public List<StudentLoanSystem.Data.Loan> LoanDatabase { get; set; }
@@ -30,14 +31,30 @@ namespace StudentLoanSystem.Pages.UserPages
         public List<Loan> denied { get; set; }
         public List<Loan> unapproved { get; set; }
         [BindProperty]
+        public string CalcCreditScore { get; set; }
+        [BindProperty]
+        public string CalcReferences { get; set; }
+        [BindProperty]
+        public string CalcInformation { get; set; }
+        [BindProperty]
+        public string RiskResult { get; set; }
+        [BindProperty]
         public string[] ApproveArray { get; set; }
 
         public async Task OnGet()
         {
         }
 
-        public async Task<IActionResult> OnPostAsync()
+        public async Task<IActionResult> OnPostRiskCalculateAsync()
         {
+            RiskCalculator riskCalculator = new RiskCalculator();
+            RiskResult = riskCalculator.calculateRisk(CalcCreditScore, CalcReferences, CalcInformation).ToString();
+            return Page();
+        }
+
+        public async Task<IActionResult> OnPostSubmitLoansAsync()
+        {
+
             for (var i = 0; i < ApproveArray.Length; i++)
             {
                 if (ApproveArray.ElementAt(i) == "Approve")

@@ -1,5 +1,6 @@
 ﻿@page "{handler?}"
 @model StudentLoanSystem.Data.AccountData
+@using StudentLoanSystem.Data
 @{
 
 
@@ -7,23 +8,23 @@
     @functions{
         public void OnGet() { }
 
-        public async Task<IActionResult> OnPostLoginAsync(Data.Users.BaseUser m)
+        public async Task<IActionResult> OnPostLoginAsync(StudentLoanSystem.Data.Users.BaseUser m)
         {
             // Data.AccountData AccData
-            if (Data.AccountData.CheckLogin(m))
+            if (StudentLoanSystem.Data.AccountData.CheckLogin(m))
             {
 
                 switch (m.Id)
                 {
                     //userType 1
                     case 1:
-                        return RedirectToPage("UserPages/StudentView", Data.AccountData.CreateUser(m.Username, m.Id) );
+                        return RedirectToPage("UserPages/StudentView", StudentLoanSystem.Data.AccountData.CreateUser(m.Username, m.Id) );
                     //userType 2
                     case 2:
-                        return RedirectToPage("UserPages/LoanOfficerView", Data.AccountData.CreateUser(m.Username, m.Id) );
+                        return RedirectToPage("UserPages/LoanOfficerMainView", StudentLoanSystem.Data.AccountData.CreateUser(m.Username, m.Id) );
                     //userType 3
                     case 3:
-                        return RedirectToPage("UserPages/RegistarView", Data.AccountData.CreateUser(m.Username, m.Id) );
+                        return RedirectToPage("UserPages/RegistarView", StudentLoanSystem.Data.AccountData.CreateUser(m.Username, m.Id) );
                     default:
                         return RedirectToPage("Index");
                 }

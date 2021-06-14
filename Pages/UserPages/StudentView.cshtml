@@ -6,7 +6,7 @@
     @functions{
         int i = 0;
         int j = 0;
-        public void OnGet(Data.Users.Student student)
+        public void OnGet(StudentLoanSystem.Data.Users.Student student)
         {
             //System.Diagnostics.Debug.WriteLine(student.Username);
             //DropDownList1.Items.Insert(0, new ListItem("Add New", ""));
@@ -15,12 +15,12 @@
         }
         public async Task OnPostSelectLoanAsync()
         {
-            Data.Users.Student student = Data.AccountData.CurrentStudent;
+            StudentLoanSystem.Data.Users.Student student = StudentLoanSystem.Data.AccountData.CurrentStudent;
             String selectedValue = Request.Form["selectedLoanValue"];
-            List<Data.Loan> loanList = Data.AccountData.LoanList;
-            Data.Loan tempLoan = new Data.Loan();
+            List<StudentLoanSystem.Data.Loan> loanList = StudentLoanSystem.Data.AccountData.LoanList;
+            StudentLoanSystem.Data.Loan tempLoan = new StudentLoanSystem.Data.Loan();
 
-            foreach (Data.Loan loan in loanList)
+            foreach (StudentLoanSystem.Data.Loan loan in loanList)
             {
                 if (loan.principle.ToString().Equals(selectedValue))
                 {
@@ -28,13 +28,13 @@
                 }
             }
             student.loanApplyingFor = tempLoan;
-            Data.AccountData.ApplyForLoan(student);
-            RedirectToPage("UserPages/StudentView", Data.AccountData.CreateUser(student.Username, student.Id));
+            StudentLoanSystem.Data.AccountData.ApplyForLoan(student);
+            RedirectToPage("UserPages/StudentView", StudentLoanSystem.Data.AccountData.CreateUser(student.Username, student.Id));
             //System.Diagnostics.Debug.WriteLine("TEST " + student.FirstName + " " + student.loanApplyingFor.loanName);
         }
         public async Task OnPostSelectAppliedAsync()
         {
-            Data.Users.Student student = Data.AccountData.CurrentStudent;
+            StudentLoanSystem.Data.Users.Student student = StudentLoanSystem.Data.AccountData.CurrentStudent;
             String selectedValue = Request.Form["selectedAppliedforLoan"];
             try
             {
@@ -49,7 +49,7 @@
         }
         public async Task OnPostSelectCurrentAsync()
         {
-            Data.Users.Student student = Data.AccountData.CurrentStudent;
+            StudentLoanSystem.Data.Users.Student student = StudentLoanSystem.Data.AccountData.CurrentStudent;
             String selectedValue = Request.Form["selectedCurrentLoan"];
             try
             {
@@ -87,7 +87,7 @@
                                     UserType: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.Id.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.Id.ToString(), new { @class = "text-danger" }) <br />
                                     Credit Score: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.creditScore.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.creditScore.ToString(), new { @class = "text-danger" }) <br />
                                     Student ID: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.StudentID.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.StudentID.ToString(), new { @class = "text-danger" }) <br />
-                                    Student Email: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.email, StudentLoanSystem.Data.AccountData.CurrentStudent.email, new { @class = "text-danger" }) <br />
+                                    Student Email: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.Email, StudentLoanSystem.Data.AccountData.CurrentStudent.Email, new { @class = "text-danger" }) <br />
                                 </p>
                             </div>
                         </div>

@@ -3,6 +3,7 @@
 
 @{
     ViewData["Title"] = "LoanOfficerMainView";
+
 }
 
 <h1>Loans For Review</h1>
@@ -50,44 +51,44 @@
                         foreach (var item in Model.unapproved)
                         {
                             //var approve = Model.AboutToApprove[item.Id - 1];
-                                        <tr>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.StudentId)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.FirstName)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.LastName)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.PostTime)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Principle)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Rate)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Start)
-                                            </td>
-                                            <td>
-                                                @Html.DisplayFor(modelItem => item.Length)
-                                            </td>
-                                            <td>
-                                                @Html.RadioButtonFor(modelItem => Model.ApproveArray[count], "Approve")
-                                            </td>
-                                            <td>
-                                                @Html.RadioButtonFor(modelItem => Model.ApproveArray[count], "Deny")
-                                            </td>
-                                        </tr>
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.StudentId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.FirstName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.LastName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.PostTime)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Principle)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Rate)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Start)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Length)
+                                </td>
+                                <td>
+                                    @Html.RadioButtonFor(modelItem => Model.ApproveArray[count], "Approve")
+                                </td>
+                                <td>
+                                    @Html.RadioButtonFor(modelItem => Model.ApproveArray[count], "Deny")
+                                </td>
+                            </tr>
                             count++;
                         }
                     }
             </tbody>
         </table>
-        <input type="submit" value="submit" />
+        <button asp-page-handler="SubmitLoans">Submit</button>
     </form>
 </div>
 
@@ -218,6 +219,24 @@
         }
     </tbody>
 </table>
+<form method="post">
+    <fieldset>
+        <h1>Calculate Risk</h1>
+        <div>
+            @Html.DisplayName("Student Credit Score")
+            @Html.TextBoxFor(modelItem => Model.CalcCreditScore)
+            @Html.DisplayName("Student References  ")
+            @Html.TextBoxFor(modelItem => Model.CalcReferences)
+            @Html.DisplayName("Student Information")
+            @Html.TextBoxFor(modelItem => Model.CalcInformation)
+        </div>
+    </fieldset>
+    <button style="margin:10px;" asp-page-handler="RiskCalculate">Calculate</button>
+</form>
+
+    @Html.DisplayName("Result:")
+    @Html.DisplayFor(modelItem => Model.RiskResult)
+
 
 
 <h1>Students</h1>

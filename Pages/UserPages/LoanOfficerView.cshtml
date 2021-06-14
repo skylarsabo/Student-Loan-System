@@ -21,24 +21,24 @@
 
         public async Task OnPostAcceptLoanAsync()
         {
-            Data.Users.LoanOfficer loanOfficer = Data.AccountData.CurrentLoanOfficer;
-            Data.Loan tempLoan = new Data.Loan();
+            StudentLoanSystem.Data.Users.LoanOfficer loanOfficer = StudentLoanSystem.Data.AccountData.CurrentLoanOfficer;
+            StudentLoanSystem.Data.Loan tempLoan = new StudentLoanSystem.Data.Loan();
             try
             {
                 String selectedValue = Request.Form["selectedReviewLoanName"];
                 String loanName = selectedValue.Substring(0, 5);
                 loanName = loanName.Trim();
-                foreach (Data.Loan loan in loanOfficer.LoansNeedingReview)
+                foreach (StudentLoanSystem.Data.Loan loan in loanOfficer.LoansNeedingReview)
                 {
                     if(loan.loanName.Trim().Equals(loanName))
                     {
                         tempLoan = loan;
                         break;
-                        
+
                     }
                 }
-                Data.AccountData.AcceptLoan(tempLoan, loanOfficer);
-                RedirectToPage("UserPages/LoanOfficerView", Data.AccountData.CreateUser(loanOfficer.Username, loanOfficer.Id));
+                StudentLoanSystem.Data.AccountData.AcceptLoan(tempLoan, loanOfficer);
+                RedirectToPage("UserPages/LoanOfficerView", StudentLoanSystem.Data.AccountData.CreateUser(loanOfficer.Username, loanOfficer.Id));
             }
             catch(Exception e)
             {
@@ -48,14 +48,14 @@
         }
         public async Task OnPostDenyLoanAsync()
         {
-            Data.Users.LoanOfficer loanOfficer = Data.AccountData.CurrentLoanOfficer;
-            Data.Loan tempLoan = new Data.Loan();
+            StudentLoanSystem.Data.Users.LoanOfficer loanOfficer = StudentLoanSystem.Data.AccountData.CurrentLoanOfficer;
+            StudentLoanSystem.Data.Loan tempLoan = new StudentLoanSystem.Data.Loan();
             try
             {
                 String selectedValue = Request.Form["selectedReviewLoanName2"];
                 String loanName = selectedValue.Substring(0, 5);
                 loanName = loanName.Trim();
-                foreach (Data.Loan loan in loanOfficer.LoansNeedingReview)
+                foreach (StudentLoanSystem.Data.Loan loan in loanOfficer.LoansNeedingReview)
                 {
                     if (loan.loanName.Trim().Equals(loanName))
                     {
@@ -63,8 +63,8 @@
                         break;
                     }
                 }
-                Data.AccountData.DenyLoan(tempLoan, loanOfficer);
-                RedirectToPage("UserPages/LoanOfficerView", Data.AccountData.CreateUser(loanOfficer.Username, loanOfficer.Id));
+                StudentLoanSystem.Data.AccountData.DenyLoan(tempLoan, loanOfficer);
+                RedirectToPage("UserPages/LoanOfficerView", StudentLoanSystem.Data.AccountData.CreateUser(loanOfficer.Username, loanOfficer.Id));
             }
             catch (Exception e)
             {
@@ -73,7 +73,7 @@
         }
         public async Task OnPostResetLoansAsync()
         {
-            Data.AccountData.ResetDB();
+            StudentLoanSystem.Data.AccountData.ResetDB();
         }
 
 
@@ -101,9 +101,9 @@
                                 <p class="card-text">
                                     Username: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.Username, StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.Username, new { @class = "text-danger" }) <br />
                                     UserType: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.Id.ToString(), StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.Id.ToString(), new { @class = "text-danger" }) <br />
-                                    Phone Number: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.phoneNumber, StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.phoneNumber, new { @class = "text-danger" }) <br />
+                                    Phone Number: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.PhoneNumber, StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.PhoneNumber, new { @class = "text-danger" }) <br />
                                     Loan Officer ID: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.LoanOfficerId.ToString(), StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.LoanOfficerId.ToString(), new { @class = "text-danger" }) <br />
-                                    Loan Officer Email: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.email, StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.email, new { @class = "text-danger" }) <br />
+                                    Loan Officer Email: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.Email, StudentLoanSystem.Data.AccountData.CurrentLoanOfficer.Email, new { @class = "text-danger" }) <br />
                                 </p>
                             </div>
                         </div>
