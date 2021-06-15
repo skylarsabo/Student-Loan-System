@@ -21,6 +21,8 @@ namespace StudentLoanSystem.Data
 
 
         public static Student CurrentStudent { get; set; }
+        //public static Bank currentBank { get; set; }
+        public static Registrar CurrentRegistrar { get; set; }
         public static List<Student> Students { get; set; }
         public static LoanOfficer CurrentOfficer { get; set; }
         public static List<Loan> Loans { get; set; }
@@ -532,14 +534,14 @@ namespace StudentLoanSystem.Data
                     CurrentOfficer = officer;
                     return officer;
                 case 3:
-                    Data.Users.Registar registar = new()
+                    Data.Users.Registrar registrar = new()
                     {
                         Username = username,
                         Id = id
                     };
-                    registar = RetriveRegistarInformation(registar);
-                    CurrentRegistar = registar;
-                    return registar;
+                    registrar = RetrieveRegistrarInformation(registrar);
+                    CurrentRegistrar = registrar;
+                    return registrar;
                 default:
                     return null;
             }
