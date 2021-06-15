@@ -11,28 +11,13 @@ namespace StudentLoanSystem.Data
 {
     class RiskCalculator
     {
-        string studentCreditScore = "";
-        string studentReferences = "";
-        string studentInformation = "";
-
-        public string getStudentCreditScore() { return studentCreditScore; }
-
-        public string getStudentReferences() { return studentReferences; }
-
-        public string getStudentInformation() { return studentInformation; }
-
-        private void setStudentCreditScore(string newStudentCreditScore) { studentCreditScore = newStudentCreditScore; }
-
-        private void setStudentReferences(string newStudentReferences) { studentReferences = newStudentReferences; }
-
-        private void setStudentInformation(string newStudentInformation) { studentInformation = newStudentInformation; }
-
-        public int calculateRisk(string studentCreditScore, string studentReferences, string studentInformation)
+        public static bool calculateRisk(int creditScore, int yearlyIncome, int amount, int accountBalance)
         {
-            int calculatedRisk = 0;
-            return calculatedRisk;
+            int expectedPayoffTime = (amount = accountBalance) / yearlyIncome;
+            if (expectedPayoffTime <= 10 && creditScore >= 600)
+                return true;
+            return false;
         }
 
     }
-
 }

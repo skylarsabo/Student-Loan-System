@@ -225,10 +225,12 @@
         <div>
             @Html.DisplayName("Student Credit Score")
             @Html.TextBoxFor(modelItem => Model.CalcCreditScore)
-            @Html.DisplayName("Student References  ")
-            @Html.TextBoxFor(modelItem => Model.CalcReferences)
-            @Html.DisplayName("Student Information")
-            @Html.TextBoxFor(modelItem => Model.CalcInformation)
+            @Html.DisplayName("Student Yearly Income")
+            @Html.TextBoxFor(modelItem => Model.CalcYearlyIncome)
+            @Html.DisplayName("Loan Amount")
+            @Html.TextBoxFor(modelItem => Model.CalcAmount)
+            @Html.DisplayName("Student Account Balance")
+            @Html.TextBoxFor(modelItem => Model.CalcAccountBalance)
         </div>
     </fieldset>
     <button style="margin:10px;" asp-page-handler="RiskCalculate">Calculate</button>

@@ -31,11 +31,13 @@ namespace StudentLoanSystem.Pages.UserPages
         public List<Loan> denied { get; set; }
         public List<Loan> unapproved { get; set; }
         [BindProperty]
-        public string CalcCreditScore { get; set; }
+        public int CalcCreditScore { get; set; }
         [BindProperty]
-        public string CalcReferences { get; set; }
+        public int CalcYearlyIncome { get; set; }
         [BindProperty]
-        public string CalcInformation { get; set; }
+        public int CalcAmount { get; set; }
+        [BindProperty]
+        public int CalcAccountBalance { get; set; }
         [BindProperty]
         public string RiskResult { get; set; }
         [BindProperty]
@@ -47,8 +49,7 @@ namespace StudentLoanSystem.Pages.UserPages
 
         public async Task<IActionResult> OnPostRiskCalculateAsync()
         {
-            RiskCalculator riskCalculator = new RiskCalculator();
-            RiskResult = riskCalculator.calculateRisk(CalcCreditScore, CalcReferences, CalcInformation).ToString();
+            RiskResult = StudentLoanSystem.Data.RiskCalculator.calculateRisk(CalcCreditScore, CalcYearlyIncome, CalcAmount, CalcAccountBalance).ToString();
             return Page();
         }
 

@@ -175,3 +175,4 @@ C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSyst
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.dll
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\ref\StudentLoanSystem.dll
 C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.pdb
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.csprojAssemblyReference.cache

@@ -31,7 +31,6 @@ namespace StudentLoanSystem.Data
         public static List<Loan> LoanList { get; set; }
         public static List<Loan> NotAssignedLoans { get; set; }
         public static List<Loan> ApplyLoanList { get; set; }
-        public static Registrar CurrentRegistrar { get; set; }
 
         public static List<Loan> ReviewLoanList { get; set; }
 
