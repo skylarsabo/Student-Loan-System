@@ -40,7 +40,7 @@
             {
                 i = Int32.Parse(selectedValue) - 1;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
 
             }
@@ -85,7 +85,7 @@
                                 <p class="card-text">
                                     Username: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.Username, StudentLoanSystem.Data.AccountData.CurrentStudent.Username, new { @class = "text-danger" }) <br />
                                     UserType: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.Id.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.Id.ToString(), new { @class = "text-danger" }) <br />
-                                    Credit Score: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.creditScore.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.creditScore.ToString(), new { @class = "text-danger" }) <br />
+                                    Credit Score: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.CreditScore.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.CreditScore.ToString(), new { @class = "text-danger" }) <br />
                                     Student ID: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.StudentID.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.StudentID.ToString(), new { @class = "text-danger" }) <br />
                                     Student Email: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.Email, StudentLoanSystem.Data.AccountData.CurrentStudent.Email, new { @class = "text-danger" }) <br />
                                 </p>
@@ -176,13 +176,48 @@
                                 <br />
                                 <div class="card">
                                     <div class="card-body">
-                                        @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].loanName, StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].loanName, new { @class = "text-danger" }) <br />
-                                        Principle: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].principle.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].principle.ToString(), new { @class = "text-danger" }) <br />
-                                        Start Date: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].start.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].start.ToString(), new { @class = "text-danger" }) <br />
-                                        Date Posted: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].postTime.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].postTime.ToString(), new { @class = "text-danger" }) <br />
-                                        Approved? [1=yes,0=no]: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].approved.ToString(), StudentLoanSystem.Data.AccountData.CurrentStudent.ApplyForLoansList[i].approved.ToString(), new { @class = "text-danger" }) <br />
+
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <br />
+                        <!--Payment Calculator-->
+                        <div class="card">
+                            <h5 class="card-title">Payments For Each Month after Payment Begins</h5>
+                            <div class="card-body">
+                                @{
+                                    StudentLoanSystem.Data.PaymentCalculation currentPayments = StudentLoanSystem.Data.AccountData.calcPayments(StudentLoanSystem.Data.AccountData.CurrentStudent);
+
+                                }
+                                <table>
+                                    <tr>
+                                        <th>Month</th>
+                                        <th>Total Owed</th>
+                                        <th>Principal Owed</th>
+                                        <th>Interest Owed</th>
+                                    </tr>
+                                    @for (int i = 0; i < currentPayments.monthsDisplayed; i++)
+                                    {
+                                        <tr>
+                                            <td>@(i+1)</td>
+                                            <td>$@currentPayments.totalAmountOwed[i]</td>
+                                            <td>$@currentPayments.totalPrincipalOwed[i]</td>
+                                            <td>$@currentPayments.totalInterestOwed[i]</td>
+                                        </tr>
+                                    }
+                                </table>
+                            </div>
+                        </div>
+                        <!--View Registrar Messages-->
+                        <div class="card">
+                            <h5 class="card-title">Notifications</h5>
+                            <div class="card-body">
+                                @foreach (var item in StudentLoanSystem.Data.AccountData.CurrentStudent.currentMessages)
+                                {
+                                    @item
+                                }
+
                             </div>
                         </div>
                     </div>

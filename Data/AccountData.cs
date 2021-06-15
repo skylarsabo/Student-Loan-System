@@ -26,10 +26,10 @@ namespace StudentLoanSystem.Data
         public static List<Loan> Loans { get; set; }
         //public static Registar CurrentRegistar { get; set; }
         public static LoanOfficer CurrentLoanOfficer { get; set; }
-        public static Registar CurrentRegistar { get; set; }
         public static List<Loan> LoanList { get; set; }
         public static List<Loan> NotAssignedLoans { get; set; }
         public static List<Loan> ApplyLoanList { get; set; }
+        public static Registrar CurrentRegistrar { get; set; }
 
         public static List<Loan> ReviewLoanList { get; set; }
 
@@ -121,6 +121,7 @@ namespace StudentLoanSystem.Data
                 }
             }
             UpdateStudentLoanLists(student);
+            UpdateStudentMessages(student);
             return student;
         }
 
@@ -275,10 +276,11 @@ namespace StudentLoanSystem.Data
             UpdateLoanOfficerLoanLists(loanOfficer);
             return loanOfficer;
         }
-        public static Registar RetriveRegistarInformation(Registar registar)
+
+        public static Registrar RetrieveRegistrarInformation(Registrar registrar)
         {
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
-            builder.DataSource = SQLDataSource;
+            builder.DataSource = "student-loan-server.database.windows.net";
             builder.UserID = SQLUserID;
             builder.Password = SQLPassword;
             builder.InitialCatalog = SQLInitialCatalog;
@@ -293,20 +295,19 @@ namespace StudentLoanSystem.Data
                     {
                         while (reader.Read())
                         {
-                            if (reader.GetString(0).Trim().Equals(registar.Username, StringComparison.OrdinalIgnoreCase))
+                            if (reader.GetString(0).Trim().Equals(registrar.Username, StringComparison.OrdinalIgnoreCase))
                             {
-                                registar.FirstName = reader.GetString(1);
-                                registar.LastName = reader.GetString(2);
-                                registar.Username = registar.Username;
-                                registar.Id = registar.Id;
+                                registrar.FirstName = reader.GetString(1);
+                                registrar.LastName = reader.GetString(2);
+                                registrar.Username = registrar.Username;
                             }
                         }
                     }
-                    connection.Close();
                 }
             }
-            return registar;
+            return registrar;
         }
+
 
         public static void UpdateLoanOfficerLoanLists(LoanOfficer loanOfficer)
         {
@@ -364,6 +365,42 @@ namespace StudentLoanSystem.Data
             });
             ApplyLoanListItems = tempApplyLoanListItems;
             CurrentStudentLoanItems = tempCurrentStudentLoanItems;
+        }
+
+        public static void UpdateStudentMessages(Student student)
+        {
+            List<string> messageList = new List<string>();
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            builder.DataSource = SQLDataSource;
+            builder.UserID = SQLUserID;
+            builder.Password = SQLPassword;
+            builder.InitialCatalog = SQLInitialCatalog;
+            using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+            {
+                String sql = "SELECT MessageText FROM MessageTable WHERE StudentUsername = '";
+                sql += student.Username;
+                sql += "';";
+
+                using (SqlCommand command = new SqlCommand(sql, connection))
+                {
+                    connection.Open();
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            messageList.Add(reader["MessageText"].ToString());
+                        }
+                    }
+                    connection.Close();
+                }
+            }
+            student.currentMessages = messageList;
+        }
+
+        public static PaymentCalculation calcPayments(Student student)
+        {
+            PaymentCalculation CalculatedPayment = StudentLoanSystem.Data.PaymentCalculator.calculatePayments(student.currentStudentLoans);
+            return CalculatedPayment;
         }
         public static void RetriveLoans()
         {
@@ -454,7 +491,7 @@ namespace StudentLoanSystem.Data
             builder.InitialCatalog = SQLInitialCatalog;
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
-                String sql = "UPDATE LoanTable SET studentId='" + student.StudentID + "',username='" + student.Username + "',firstName='" + student.FirstName + "',lastName='" + student.LastName + "',assigned='1',creditScore='" + student.creditScore + "' WHERE principle='" + student.loanApplyingFor.principle + "'";
+                String sql = "UPDATE LoanTable SET studentId='" + student.StudentID + "',username='" + student.Username + "',firstName='" + student.FirstName + "',lastName='" + student.LastName + "',assigned='1',creditScore='" + student.CreditScore + "' WHERE principle='" + student.loanApplyingFor.principle + "'";
 
 
                 using (SqlCommand command = new SqlCommand(sql, connection))
@@ -532,14 +569,14 @@ namespace StudentLoanSystem.Data
                     CurrentOfficer = officer;
                     return officer;
                 case 3:
-                    Data.Users.Registar registar = new()
+                    Data.Users.Registrar registrar = new()
                     {
                         Username = username,
                         Id = id
                     };
-                    registar = RetriveRegistarInformation(registar);
-                    CurrentRegistar = registar;
-                    return registar;
+                    registrar = RetrieveRegistrarInformation(registrar);
+                    CurrentRegistrar = registrar;
+                    return registrar;
                 default:
                     return null;
             }

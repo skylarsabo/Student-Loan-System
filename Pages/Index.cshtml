@@ -24,7 +24,7 @@
                         return RedirectToPage("UserPages/LoanOfficerMainView", StudentLoanSystem.Data.AccountData.CreateUser(m.Username, m.Id) );
                     //userType 3
                     case 3:
-                        return RedirectToPage("UserPages/RegistarView", StudentLoanSystem.Data.AccountData.CreateUser(m.Username, m.Id) );
+                        return RedirectToPage("UserPages/RegistrarView", StudentLoanSystem.Data.AccountData.CreateUser(m.Username, m.Id));
                     default:
                         return RedirectToPage("Index");
                 }

@@ -1,0 +1,115 @@
+﻿@page
+@model StudentLoanSystem.Pages.Data.RegistrarViewModel
+@{
+    ViewData["Title"] = "";
+
+    }
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Your Info</h3>
+                        Username: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentRegistrar.Username, StudentLoanSystem.Data.AccountData.CurrentRegistrar.Username, new { @class = "text-danger" }) <br />
+                        UserType: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentRegistrar.Id.ToString(), StudentLoanSystem.Data.AccountData.CurrentRegistrar.Id.ToString(), new { @class = "text-danger" }) <br />
+                        First Name: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentRegistrar.FirstName, StudentLoanSystem.Data.AccountData.CurrentRegistrar.FirstName, new { @class = "text-danger" }) <br />
+                        Last Name: @Html.Label(StudentLoanSystem.Data.AccountData.CurrentRegistrar.LastName, StudentLoanSystem.Data.AccountData.CurrentRegistrar.LastName, new { @class = "text-danger" }) <br />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h1>Loans</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayName("Student ID")
+                </th>
+                <th>
+                    @Html.DisplayName("First Name")
+                </th>
+                <th>
+                    @Html.DisplayName("Last Name")
+                </th>
+                <th>
+                    @Html.DisplayName("Post Time")
+                </th>
+                <th>
+                    @Html.DisplayName("Principle")
+                </th>
+                <th>
+                    @Html.DisplayName("Interest Rate")
+                </th>
+                <th>
+                    @Html.DisplayName("Start Date")
+                </th>
+                <th>
+                    @Html.DisplayName("Length")
+                </th>
+                <th>
+                    @Html.DisplayName("Approved")
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model.LoanDatabase)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StudentId)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PostTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Principle)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Rate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Start)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Length)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Approved)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <form method="post">
+        <fieldset>
+            <h1>Send a Billing Notification to a Student</h1>
+            <div>
+                @Html.DisplayName("Student's Username")
+                @Html.TextBoxFor(modelItem => Model.StudentUsername)
+                @Html.DisplayName("Message")
+                @Html.TextBoxFor(modelItem => Model.MessageText)
+            </div>
+        </fieldset>
+        <button style="margin:10px;" asp-page-handler="SendMessage">Send</button>
+    </form>
+
+
+</body>
+</html>
