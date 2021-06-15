@@ -164,3 +164,14 @@ C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSyst
 C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\ref\StudentLoanSystem.dll
 C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.pdb
 C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.genruntimeconfig.cache
+C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.csprojAssemblyReference.cache
+C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.AssemblyInfoInputs.cache
+C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.AssemblyInfo.cs
+C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.csproj.CoreCompileInputs.cache
+C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.RazorAssemblyInfo.cache
+C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.RazorAssemblyInfo.cs
+C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.dll
+C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\ref\StudentLoanSystem.dll
+C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.pdb
