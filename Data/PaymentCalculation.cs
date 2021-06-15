@@ -1,16 +1,20 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace StudentLoanTest
+namespace StudentLoanSystem.Data
 {
-    class PaymentCalculation
+    public class PaymentCalculation
     {
-        int monthsDisplayed;
-        double[] totalAmountOwed;
-        double[] totalPrincipalOwed;
-        double[] totalInterestOwed;
+        public int monthsDisplayed;
+        public double[] totalAmountOwed;
+        public double[] totalPrincipalOwed;
+        public double[] totalInterestOwed;
 
         public PaymentCalculation(int newMonthsDisplayed, double[] newTotalAmountOwed, double[] newTotalPrincipalOwed, double[] newTotalInterestOwed)
         {

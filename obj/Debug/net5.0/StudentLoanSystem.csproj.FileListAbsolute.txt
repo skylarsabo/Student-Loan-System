@@ -1,326 +1,166 @@
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\StudentLoanSystem.csprojAssemblyReference.cache
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\StudentLoanSystem.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\StudentLoanSystem.AssemblyInfoInputs.cache
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\StudentLoanSystem.AssemblyInfo.cs
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\StudentLoanSystem.csproj.CoreCompileInputs.cache
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\StudentLoanSystem.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\StudentLoanSystem.RazorAssemblyInfo.cache
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\StudentLoanSystem.RazorAssemblyInfo.cs
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\appsettings.Development.json
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\appsettings.json
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\StudentLoanSystem.exe
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\StudentLoanSystem.deps.json
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\StudentLoanSystem.runtimeconfig.json
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\StudentLoanSystem.runtimeconfig.dev.json
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\StudentLoanSystem.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\ref\StudentLoanSystem.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\StudentLoanSystem.pdb
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\StudentLoanSystem.Views.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\StudentLoanSystem.Views.pdb
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Humanizer.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.CodeAnalysis.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.CodeAnalysis.Razor.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.CodeAnalysis.Workspaces.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.Identity.Client.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\dotnet-aspnet-codegenerator-design.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Newtonsoft.Json.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Composition.AttributedModel.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Composition.Convention.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Composition.Hosting.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Composition.Runtime.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Composition.TypedParts.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Runtime.Caching.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\staticwebassets\StudentLoanSystem.StaticWebAssets.Manifest.cache
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\staticwebassets\StudentLoanSystem.StaticWebAssets.xml
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\scopedcss\bundle\StudentLoanSystem.styles.css
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\StudentLoanSystem.TagHelpers.input.cache
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\StudentLoanSystem.TagHelpers.output.cache
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\StudentLoanSystem.RazorCoreGenerate.cache
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\StudentLoanSystem.RazorTargetAssemblyInfo.cache
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\StudentLoanSystem.RazorTargetAssemblyInfo.cs
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\StudentLoanSystem.Views.pdb
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\StudentLoanSystem.csproj.CopyComplete
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\StudentLoanSystem.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\ref\StudentLoanSystem.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\StudentLoanSystem.pdb
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\StudentLoanSystem.genruntimeconfig.cache
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\Shared\_LoginPage.cshtml.g.cs
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\Other\TestRedirectView.cshtml.g.cs
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Web.Mvc.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Web.Razor.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Web.Helpers.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Web.WebPages.Deployment.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Web.WebPages.Razor.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\System.Web.WebPages.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\UserPages\StudentView.cshtml.g.cs
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\UserPages\LoanOfficerView.cshtml.g.cs
-C:\Users\skyla\Documents\Kettering\Spring 2021\CS 471\Lab\StudentLoanSystem\StudentLoanSystem\obj\Debug\net5.0\Razor\Pages\UserPages\RegistarView.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.csprojAssemblyReference.cache
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.AssemblyInfoInputs.cache
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.AssemblyInfo.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.csproj.CoreCompileInputs.cache
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.RazorAssemblyInfo.cache
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.RazorAssemblyInfo.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\staticwebassets\StudentLoanSystem.StaticWebAssets.Manifest.cache
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\staticwebassets\StudentLoanSystem.StaticWebAssets.xml
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\scopedcss\bundle\StudentLoanSystem.styles.css
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.TagHelpers.input.cache
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.TagHelpers.output.cache
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.RazorCoreGenerate.cache
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Data\Create.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Data\Delete.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Data\Details.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Data\Edit.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Other\TestRedirectView.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Shared\_LoginPage.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\UserPages\LoanOfficerMainView.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\UserPages\LoanOfficerView.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\UserPages\RegistarView.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\UserPages\StudentView.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.RazorTargetAssemblyInfo.cache
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.RazorTargetAssemblyInfo.cs
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.dll
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\ref\StudentLoanSystem.dll
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.pdb
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\appsettings.Development.json
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\appsettings.json
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Pages\Properties\launchSettings.json
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Pages\Properties\serviceDependencies.json
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Pages\Properties\serviceDependencies.local.json
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\StudentLoanSystem.exe
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\StudentLoanSystem.deps.json
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\StudentLoanSystem.runtimeconfig.json
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\StudentLoanSystem.runtimeconfig.dev.json
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\StudentLoanSystem.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\ref\StudentLoanSystem.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\StudentLoanSystem.pdb
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\StudentLoanSystem.Views.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\StudentLoanSystem.Views.pdb
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Humanizer.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Web.Mvc.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Web.Razor.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Web.Helpers.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Web.WebPages.Deployment.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Web.WebPages.Razor.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Web.WebPages.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.CodeAnalysis.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.CodeAnalysis.Razor.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.CodeAnalysis.Workspaces.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.Identity.Client.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\dotnet-aspnet-codegenerator-design.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\Newtonsoft.Json.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Composition.AttributedModel.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Composition.Convention.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Composition.Hosting.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Composition.Runtime.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Composition.TypedParts.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Runtime.Caching.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\ngran\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.Views.pdb
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.csproj.CopyComplete
-C:\Users\ngran\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.genruntimeconfig.cache
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\appsettings.json
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Pages\Properties\launchSettings.json
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Pages\Properties\serviceDependencies.json
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Pages\Properties\serviceDependencies.local.json
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\StudentLoanSystem.exe
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\StudentLoanSystem.deps.json
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\StudentLoanSystem.runtimeconfig.json
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\StudentLoanSystem.runtimeconfig.dev.json
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\StudentLoanSystem.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\ref\StudentLoanSystem.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\StudentLoanSystem.pdb
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\StudentLoanSystem.Views.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\StudentLoanSystem.Views.pdb
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Humanizer.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Web.Mvc.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Web.Razor.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Web.Helpers.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Web.WebPages.Deployment.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Web.WebPages.Razor.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Web.WebPages.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.CodeAnalysis.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.Data.SqlClient.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.Identity.Client.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\dotnet-aspnet-codegenerator-design.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Microsoft.Web.Infrastructure.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\Newtonsoft.Json.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Composition.AttributedModel.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Composition.Convention.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Composition.Hosting.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Composition.Runtime.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Composition.TypedParts.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Configuration.ConfigurationManager.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Runtime.Caching.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\cnova\source\repos\Student-Loan-System\bin\Debug\net5.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.AssemblyInfoInputs.cache
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.AssemblyInfo.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.csproj.CoreCompileInputs.cache
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.RazorAssemblyInfo.cache
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.RazorAssemblyInfo.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\staticwebassets\StudentLoanSystem.StaticWebAssets.Manifest.cache
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\staticwebassets\StudentLoanSystem.StaticWebAssets.xml
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\scopedcss\bundle\StudentLoanSystem.styles.css
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.TagHelpers.input.cache
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.TagHelpers.output.cache
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.RazorCoreGenerate.cache
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Data\Create.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Data\Delete.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Data\Details.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Data\Edit.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Error.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Index.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Other\TestRedirectView.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Privacy.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Shared\_Layout.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Shared\_LoginPage.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\UserPages\LoanOfficerMainView.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\UserPages\LoanOfficerView.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\UserPages\RegistrarView.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\UserPages\StudentView.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\_ViewImports.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\Razor\Pages\_ViewStart.cshtml.g.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.RazorTargetAssemblyInfo.cache
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.RazorTargetAssemblyInfo.cs
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.Views.pdb
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.csproj.CopyComplete
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.dll
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\ref\StudentLoanSystem.dll
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.pdb
+C:\Users\cnova\source\repos\Student-Loan-System\obj\Debug\net5.0\StudentLoanSystem.genruntimeconfig.cache
