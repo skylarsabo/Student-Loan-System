@@ -13,7 +13,7 @@ namespace StudentLoanSystem.Pages.Data
         public List<StudentLoanSystem.Data.Loan> LoanDatabase { get; set; }
         public List<StudentLoanSystem.Data.Users.Student> StudentDatabase { get; set; }
         [BindProperty]
-        public string StudentUsername { get; set; }
+        public string StudentID { get; set; }
         [BindProperty]
         public string MessageText { get; set; }
   
@@ -34,8 +34,8 @@ namespace StudentLoanSystem.Pages.Data
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
                 connection.Open();
-                String sql = "INSERT INTO MessageTable (StudentUsername, MessageText) VALUES ('";
-                sql += StudentUsername;
+                String sql = "INSERT INTO MessageTable (StudentID, MessageText) VALUES ('";
+                sql += StudentID;
                 sql += "', '";
                 sql += MessageText;
                 sql += "');";

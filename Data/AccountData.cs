@@ -377,8 +377,8 @@ namespace StudentLoanSystem.Data
             builder.InitialCatalog = SQLInitialCatalog;
             using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
             {
-                String sql = "SELECT MessageText FROM MessageTable WHERE StudentUsername = '";
-                sql += student.Username;
+                String sql = "SELECT MessageText FROM MessageTable WHERE StudentID = '";
+                sql += student.StudentID;
                 sql += "';";
 
                 using (SqlCommand command = new SqlCommand(sql, connection))
